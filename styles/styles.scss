@@ -11,7 +11,10 @@ $base-font-family-title: 'Lacquer', cursive;
 body {
   overflow: hidden;
 }
-@mixin
+
+@mixin smaller-screen {
+  @media (max-width: 1600px) { @content; }
+}
 
 /*
 SUMMARY
@@ -185,13 +188,22 @@ View Number {
     background-position: center;
     width: 900px;
     height: 400px;
-    top: 130px;
-    left: 10px;
+    top: 12%;
+    left: -2%;
+
+    @include smaller-screen {
+      width: 600px;
+    }
   }
 
   .view--1__element--2 {
-    right: 375px;
+    right: 20%;
     top: 380px;
+
+    @include smaller-screen {
+      right: 35%;
+      width: 500px;
+    }
   }
 
   .view--1__element--3 {
@@ -200,7 +212,7 @@ View Number {
     width: 400px;
     height: 350px;
     left: 100px;
-    top: 510px;
+    top: 490px;
     font-family: 'Pragati Narrow', sans-serif;
     font-size: $base-font-size;
     padding: 20px 30px;
@@ -326,6 +338,10 @@ Title general styling {
 
   &.title__view--3 {
     top: 75px;
+
+    @include smaller-screen {
+      left: 170px;
+    }
   }
 }
 

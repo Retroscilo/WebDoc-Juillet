@@ -60,6 +60,22 @@ body {
 }
 
 /*
+SUMMARY
+
+#VIEW -> Style for view and its elements
+
+#TITLE -> Style for title only
+
+#PIN -> Style for pin
+
+#POSITION -> Handle positions in viewport for js
+*/
+body {
+  overflow: hidden;
+  /* Hide scrollbars */
+}
+
+/*
 #VIEW Section
 
 Container styling;
@@ -197,12 +213,23 @@ View Number {
   background-position: center;
   width: 900px;
   height: 400px;
-  top: 130px;
-  left: 10px;
+  top: 12%;
+  left: -2%;
+}
+@media (max-width: 1600px) {
+  .view--1 .view--1__element--1 {
+    width: 600px;
+  }
 }
 .view--1 .view--1__element--2 {
-  right: 375px;
+  right: 20%;
   top: 380px;
+}
+@media (max-width: 1600px) {
+  .view--1 .view--1__element--2 {
+    right: 35%;
+    width: 500px;
+  }
 }
 .view--1 .view--1__element--3 {
   background: no-repeat url("/texturePaper.64ba02f1.png");
@@ -210,7 +237,7 @@ View Number {
   width: 400px;
   height: 350px;
   left: 100px;
-  top: 510px;
+  top: 490px;
   font-family: "Pragati Narrow", sans-serif;
   font-size: 30px;
   padding: 20px 30px;
@@ -318,6 +345,11 @@ Title general styling {
 }
 .title.title__view--3 {
   top: 75px;
+}
+@media (max-width: 1600px) {
+  .title.title__view--3 {
+    left: 170px;
+  }
 }
 
 @keyframes dash {
