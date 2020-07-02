@@ -70,11 +70,11 @@ View Number {
   }
 }
 
-.view--1 {
+.view--home {
   background: no-repeat url('/assets/img/Leviathan.png');
   background-size: contain;
 
-  .view--1__element--1 {
+  .view--home__element--1 {
     background: no-repeat url("/assets/img/home/police/icionnoie.png");
     top: 160px;
     left: 250px;
@@ -82,7 +82,7 @@ View Number {
     height: 800px;
   }
 
-  .view--1__element--2 {
+  .view--home__element--2 {
     background: no-repeat url("/assets/img/home/police/unSeulHeros.png");
     width: 200px;
     background-position: center;
@@ -91,14 +91,14 @@ View Number {
     left: 175px;
   }
 
-  .view--1__element--3 {
+  .view--home__element--3 {
     top: 220px;
     left: 195px;
     width: 410px;
     transform: rotate(-2deg) scale(1.1);
   }
 
-  .view--1__element--4 {
+  .view--home__element--4 {
     background: no-repeat url("/assets/img/home/police/icionnoie.png");
     top: 80px;
     right: 180px;
@@ -106,7 +106,7 @@ View Number {
     height: 800px;
   }
 
-  .view--1__element--5 {
+  .view--home__element--5 {
     // background: no-repeat url("/assets/img/home/bouna.png");
     width: 400px;
     background-position: center;
@@ -115,13 +115,13 @@ View Number {
     right: 245px;
   }
 
-  .view--1__element--6 {
+  .view--home__element--6 {
     top: 140px;
     right: 195px;
     transform: rotate(6deg) scale(0.8);
   }
 
-  .view--1__element--7 {
+  .view--home__element--7 {
     background: no-repeat url("/assets/img/home/police/icionnoie.png");
     bottom: -500px;
     right: 100px;
@@ -129,7 +129,7 @@ View Number {
     height: 800px;
   }
 
-  .view--1__element--8 {
+  .view--home__element--8 {
     background: no-repeat url("/assets/img/home/MalikOussekine.png");
     width: 500px;
     background-position: center;
@@ -138,13 +138,13 @@ View Number {
     right: 125px;
   }
 
-  .view--1__element--9 {
+  .view--home__element--9 {
     bottom: 140px;
     right: 115px;
     transform: rotate(-8deg) scale(0.8);
   }
 
-  .view--1__element--10 {
+  .view--home__element--10 {
     background: no-repeat url("/assets/img/home/police/icionnoie.png");
     bottom: -550px;
     left: 100px;
@@ -152,7 +152,7 @@ View Number {
     height: 800px;
   }
 
-  .view--1__element--11 {
+  .view--home__element--11 {
     background: no-repeat url("/assets/img/home/Police.png");
     width: 300px;
     background-position: center;
@@ -161,17 +161,17 @@ View Number {
     left: 185px;
   }
 
-  .view--1__element--12 {
+  .view--home__element--12 {
     bottom: 90px;
     left: 115px;
     transform: rotate(3deg) scale(0.9);
   }
 }
 
-.view--2 {
+.view--1 {
 
-  .view--2__element--1 {
-    background: no-repeat url("/assets/img/view--2/icionnoie\ 1.png");
+  .view--1__element--1 {
+    background: no-repeat url("/assets/img/view--1/icionnoie\ 1.png");
     background-size: cover;
     background-position: center;
     width: 900px;
@@ -180,12 +180,12 @@ View Number {
     left: 10px;
   }
 
-  .view--2__element--2 {
+  .view--1__element--2 {
     right: 375px;
     top: 380px;
   }
 
-  .view--2__element--3 {
+  .view--1__element--3 {
     background: no-repeat url("/assets/img/texturePaper.png");
     background-size: cover;
     width: 400px;
@@ -216,9 +216,9 @@ View Number {
   }
 }
 
-.view--3 {
+.view--2 {
 
-  .view--3__element--1 {
+  .view--2__element--1 {
     background: no-repeat url("/assets/img/texturePaper.png");
     background-size: cover;
     top: 25px;
@@ -231,23 +231,23 @@ View Number {
     font-family: 'Pragati Narrow', sans-serif;
   }
 
-  .view--3__element--2 {
+  .view--2__element--2 {
     top: 95px;
     left: 740px;
     width: 500px;
     height: 500px;
-    background: no-repeat url("/assets/img/view--3/algeriens17octobre.png");
+    background: no-repeat url("/assets/img/view--2/algeriens17octobre.png");
   }
 
-  .view--3__element--3 {
+  .view--2__element--3 {
     bottom: 150px;
     left: 680px;
   }
 }
 
-.view--4 {
+.view--3 {
 
-  .view--4__element--1 {
+  .view--3__element--1 {
     background: no-repeat url("/assets/img/texturePaper.png");
     background-size: cover;
     top: 365px;
@@ -259,8 +259,8 @@ View Number {
     font-family: 'Pragati Narrow', sans-serif;
   }
   
-  .view--4__element--2 {
-    background: no-repeat url("/assets/img/view--4/mauricepaponjuges.png");
+  .view--3__element--2 {
+    background: no-repeat url("/assets/img/view--3/mauricepaponjuges.png");
     background-size: cover;
     width: 600px;
     height: 350px;
@@ -268,7 +268,7 @@ View Number {
     top: 40px;
   }
 
-  .view--4__element--3 {
+  .view--3__element--3 {
     left: 775px;
     top: 250px;
   }
@@ -293,7 +293,7 @@ Title general styling {
   color: #f33a3a;
   text-align: center;
 
-  &.title__view--1 {
+  &.title__view--home {
     font-size: 105px;
     font-family: "Staatliches", cursive;
     display: flex;
@@ -305,7 +305,7 @@ Title general styling {
     animation: dash 20s ease-in-out forwards;
   }
 
-  &.title__view--2 {
+  &.title__view--1 {
     position: relative;
     top: 200px;
     left: 180px;
@@ -316,7 +316,7 @@ Title general styling {
     }
   }
 
-  &.title__view--4 {
+  &.title__view--3 {
     top: 75px;
   }
 }
@@ -382,23 +382,23 @@ Title general styling {
   transform: translate(-85vw, -325vh);
 }
 
-.view--1 {
+.view--home {
   left: 0vw;
   top: 0vh;
 }
 
-.view--2 {
+.view--1 {
   // min gap
   top: 110vh;
   left: 110vw;
 }
 
-.view--3 {
+.view--2 {
   top: 220vh;
   left: 130vw;
 }
 
-.view--4 {
+.view--3 {
   top: 330vh;
   left: 90vw;
 }
