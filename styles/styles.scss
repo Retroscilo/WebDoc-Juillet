@@ -8,6 +8,9 @@ $base-line-height: 130%;
 $base-color-title: #f33a3a;
 $base-font-family-title: 'Lacquer', cursive;
 
+body {
+  overflow: hidden;
+}
 @mixin
 
 /*
