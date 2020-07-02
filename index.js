@@ -78,13 +78,13 @@ function addEventListener() {
     "wheel",
     function (el) {
       var prevPosition = position;
-      if (el.deltaY > 5) {
+      if (el.deltaY > 1) {
         position++;
         container.classList.replace(
           `position--${prevPosition}`,
           `position--${position}`
         );
-      } else if( el.deltaY < -5 && position != 0) {
+      } else if( el.deltaY < -1 && position != 0) {
         position--;
         container.classList.replace(
           `position--${prevPosition}`,
