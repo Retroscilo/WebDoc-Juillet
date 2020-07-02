@@ -78,13 +78,13 @@ function addEventListener() {
     "wheel",
     function (el) {
       var prevPosition = position;
-      if (el.deltaY > 20) {
+      if (el.deltaY > 5) {
         position++;
         container.classList.replace(
           `position--${prevPosition}`,
           `position--${position}`
         );
-      } else if( el.deltaY < -20 && position != 0) {
+      } else if( el.deltaY < -5 && position != 0) {
         position--;
         container.classList.replace(
           `position--${prevPosition}`,
@@ -103,7 +103,7 @@ function addEventListener() {
 document.addEventListener('mousemove', function(e) {
   container.style.left = `${vw(5) - e.clientX*0.1}px`
   container.style.top = `${vh(5) - e.clientY*0.1}px`
-  document.querySelector('.title__view--1').style.transform = `translate(${e.clientX*0.05}px, ${e.clientY*0.05}px)`
+  document.querySelector('.title__view--home').style.transform = `translate(${e.clientX*0.05}px, ${e.clientY*0.05}px)`
 
   if(e.clientX < 20 || e.clientX > window.innerWidth - 20 || e.clientY < 20 || e.clientY > window.innerHeight - 20) {
     console.log('triggered')

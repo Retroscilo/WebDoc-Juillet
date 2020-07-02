@@ -3,6 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@400;700&display=swap');
 
+$base-font-size: 30px;
+$base-line-height: 130%;
+$base-color-title: #f33a3a;
+$base-font-family-title: 'Lacquer', cursive;
+
+@mixin
 
 /*
 SUMMARY
@@ -59,7 +65,7 @@ View Number {
     background: no-repeat url("/assets/img/home/police/Paper.png");
     background-size: cover;
     display: flex;
-    font-family: 'Lacquer', cursive;
+    font-family: $base-font-family-title, cursive;
     color: #f33a3a;
     font-size: 35px;
     font-weight: 600;
@@ -76,8 +82,8 @@ View Number {
 
   .view--home__element--1 {
     background: no-repeat url("/assets/img/home/police/icionnoie.png");
-    top: 160px;
-    left: 250px;
+    top: 23%;
+    left: 14%;
     width: 600px;
     height: 800px;
   }
@@ -87,46 +93,46 @@ View Number {
     width: 200px;
     background-position: center;
     height: 300px;
-    top: 160px;
-    left: 175px;
+    top: 19%;
+    left: 8%;
   }
 
   .view--home__element--3 {
-    top: 220px;
-    left: 195px;
+    top: 28%;
+    left: 11%;
     width: 410px;
     transform: rotate(-2deg) scale(1.1);
   }
 
   .view--home__element--4 {
     background: no-repeat url("/assets/img/home/police/icionnoie.png");
-    top: 80px;
-    right: 180px;
+    top: 15%;
+    right: 8%;
     width: 300px;
     height: 800px;
   }
 
   .view--home__element--5 {
-    // background: no-repeat url("/assets/img/home/bouna.png");
+    background: no-repeat url("/assets/img/home/bouna.png");
     width: 400px;
     background-position: center;
     height: 220px;
-    top: 80px;
-    right: 245px;
+    top: 11%;
+    right: 14%;
   }
 
   .view--home__element--6 {
-    top: 140px;
-    right: 195px;
+    top: 15%;
+    right: 12%;
     transform: rotate(6deg) scale(0.8);
   }
 
   .view--home__element--7 {
     background: no-repeat url("/assets/img/home/police/icionnoie.png");
-    bottom: -500px;
-    right: 100px;
+    bottom: 10%;
+    right: 18%;
     width: 300px;
-    height: 800px;
+    height: 250px;
   }
 
   .view--home__element--8 {
@@ -134,36 +140,36 @@ View Number {
     width: 500px;
     background-position: center;
     height: 300px;
-    bottom: 80px;
-    right: 125px;
+    bottom: 10%;
+    right: 18%;
   }
 
   .view--home__element--9 {
-    bottom: 140px;
-    right: 115px;
+    bottom: 15%;
+    right: 18%;
     transform: rotate(-8deg) scale(0.8);
   }
 
   .view--home__element--10 {
     background: no-repeat url("/assets/img/home/police/icionnoie.png");
-    bottom: -550px;
-    left: 100px;
+    bottom: 10%;
+    left: 18%;
     width: 300px;
-    height: 800px;
+    height: 250px;
   }
 
   .view--home__element--11 {
     background: no-repeat url("/assets/img/home/Police.png");
     width: 300px;
     background-position: center;
-    height: 300px;
-    bottom: 30px;
-    left: 185px;
+    height: 200px;
+    bottom: 12%;
+    left: 12%;
   }
 
   .view--home__element--12 {
-    bottom: 90px;
-    left: 115px;
+    bottom: 14%;
+    left: 14%;
     transform: rotate(3deg) scale(0.9);
   }
 }
@@ -193,7 +199,7 @@ View Number {
     left: 100px;
     top: 510px;
     font-family: 'Pragati Narrow', sans-serif;
-    font-size: 30px;
+    font-size: $base-font-size;
     padding: 20px 30px;
     line-height: 130%;
 
@@ -224,10 +230,9 @@ View Number {
     top: 25px;
     left: 230px;
     width: 450px;
-
     padding: 20px 80px 20px 30px;
     line-height: 130%;
-    font-size: 30px;
+    font-size: $base-font-size;
     font-family: 'Pragati Narrow', sans-serif;
   }
 
@@ -254,8 +259,8 @@ View Number {
     left: 375px;
     width: 550px;
     padding: 50px 30px 20px 30px;
-    line-height: 130%;
-    font-size: 30px;
+    line-height: $base-line-height;
+    font-size: $base-font-size;
     font-family: 'Pragati Narrow', sans-serif;
   }
   
@@ -288,9 +293,9 @@ Title general styling {
 
 .title {
   position: relative;
-  font-family: 'Lacquer';
+  font-family: $base-font-family-title;
   font-size: 75px;
-  color: #f33a3a;
+  color: $base-color-title;
   text-align: center;
 
   &.title__view--home {
@@ -328,41 +333,6 @@ Title general styling {
 }
 
 /******************** Title styling END *********************/
-
-/*
-#PIN Section
-
-  Pin general styling {
-    pin--type-size {
-      inner pin;
-    }
-  }
-*/
-
-.pin {
-  &.pin--red-medium {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    background: #f33a3a;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    box-shadow: 4px 4px 8px rgba($color: #000000, $alpha: 0.3);
-
-    .inner {
-      background: #f33a3a;
-      margin: auto;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      box-shadow: 4px 4px 8px rgba($color: #000000, $alpha: 0.3);
-    }
-  }
-}
-
-
 
 /** Positioning classes **/
 
