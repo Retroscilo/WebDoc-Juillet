@@ -55,26 +55,6 @@ table {
   border-spacing: 0;
 }
 
-body {
-  overflow: hidden;
-}
-
-/*
-SUMMARY
-
-#VIEW -> Style for view and its elements
-
-#TITLE -> Style for title only
-
-#PIN -> Style for pin
-
-#POSITION -> Handle positions in viewport for js
-*/
-body {
-  overflow: hidden;
-  /* Hide scrollbars */
-}
-
 /*
 #VIEW Section
 
@@ -131,6 +111,11 @@ View Number {
   left: 14%;
   width: 600px;
   height: 800px;
+  transition: transform 1s;
+}
+.view--home .view--home__element--1:hover {
+  transform: translate(180px, 15px);
+  z-index: 1;
 }
 .view--home .view--home__element--2 {
   background: no-repeat url("/unSeulHeros.1ec46638.png");
@@ -139,12 +124,21 @@ View Number {
   height: 300px;
   top: 19%;
   left: 8%;
+  transition: transform 1s;
+}
+.view--home .view--home__element--2:hover {
+  transform: translate(-45px, -150px);
+  z-index: 1;
 }
 .view--home .view--home__element--3 {
   top: 28%;
   left: 11%;
   width: 410px;
   transform: rotate(-2deg) scale(1.1);
+  transition: transform 1s;
+}
+.view--home .view--home__element--3:hover {
+  transform: translate(30px, 140px);
 }
 .view--home .view--home__element--4 {
   background: no-repeat url("/icionnoie.fc5d065e.png");
@@ -213,23 +207,12 @@ View Number {
   background-position: center;
   width: 900px;
   height: 400px;
-  top: 12%;
-  left: -2%;
-}
-@media (max-width: 1600px) {
-  .view--1 .view--1__element--1 {
-    width: 600px;
-  }
+  top: 130px;
+  left: 10px;
 }
 .view--1 .view--1__element--2 {
-  right: 20%;
+  right: 375px;
   top: 380px;
-}
-@media (max-width: 1600px) {
-  .view--1 .view--1__element--2 {
-    right: 35%;
-    width: 500px;
-  }
 }
 .view--1 .view--1__element--3 {
   background: no-repeat url("/texturePaper.64ba02f1.png");
@@ -237,7 +220,7 @@ View Number {
   width: 400px;
   height: 350px;
   left: 100px;
-  top: 490px;
+  top: 510px;
   font-family: "Pragati Narrow", sans-serif;
   font-size: 30px;
   padding: 20px 30px;
@@ -345,11 +328,6 @@ Title general styling {
 }
 .title.title__view--3 {
   top: 75px;
-}
-@media (max-width: 1600px) {
-  .title.title__view--3 {
-    left: 170px;
-  }
 }
 
 @keyframes dash {
