@@ -70,11 +70,6 @@ SUMMARY
 
 #POSITION -> Handle positions in viewport for js
 */
-body {
-  overflow: hidden;
-  /* Hide scrollbars */
-}
-
 /*
 #VIEW Section
 
@@ -106,6 +101,7 @@ View Number {
 }
 .view .element {
   position: absolute;
+  transition: transform 0.5s ease-in-out;
 }
 .view .paper {
   background: no-repeat url("/Paper.e94b08b6.png");
@@ -127,31 +123,47 @@ View Number {
 }
 .view--home .view--home__element--1 {
   background: no-repeat url("/icionnoie.fc5d065e.png");
-  top: 23%;
-  left: 14%;
-  width: 600px;
-  height: 800px;
+  background-size: contain;
+  top: 19%;
+  left: 10%;
+  width: 400px;
+  height: 250px;
+}
+@media (max-width: 1600px) {
+  .view--home .view--home__element--1 {
+    width: 300px;
+  }
 }
 .view--home .view--home__element--2 {
   background: no-repeat url("/unSeulHeros.1ec46638.png");
   width: 200px;
   background-position: center;
-  height: 300px;
+  height: 200px;
   top: 19%;
   left: 8%;
 }
+@media (max-width: 1600px) {
+  .view--home .view--home__element--2 {
+    width: 300px;
+  }
+}
 .view--home .view--home__element--3 {
-  top: 28%;
-  left: 11%;
+  top: 25%;
+  left: 7%;
   width: 410px;
-  transform: rotate(-2deg) scale(1.1);
+  transform: rotate(-2deg) scale(0.9);
+}
+@media (max-width: 1600px) {
+  .view--home .view--home__element--3 {
+    transform: rotate(-2deg) scale(0.8);
+  }
 }
 .view--home .view--home__element--4 {
   background: no-repeat url("/icionnoie.fc5d065e.png");
   top: 15%;
   right: 8%;
   width: 300px;
-  height: 800px;
+  height: 250px;
 }
 .view--home .view--home__element--5 {
   background: no-repeat url("/bouna.e37c61af.png");
@@ -393,6 +405,23 @@ Title general styling {
 .view--3 {
   top: 330vh;
   left: 90vw;
+}
+
+.hovered--1 {
+  transform: translate(150px, -60px);
+}
+
+.hovered--2 {
+  transform: translate(-20px);
+}
+
+.hovered--3 {
+  transform: rotate(-2deg) scale(0.9) translate(40px, 100px) !important;
+}
+@media (max-width: 1600px) {
+  .hovered--3 {
+    transform: rotate(-2deg) scale(0.8) translate(40px, 100px) !important;
+  }
 }
 
 /*# sourceMappingURL=/styles.c86c3119.css.map */

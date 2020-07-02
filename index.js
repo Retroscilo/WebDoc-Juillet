@@ -84,7 +84,7 @@ function addEventListener() {
           `position--${prevPosition}`,
           `position--${position}`
         );
-      } else if( el.deltaY < -0.1 && position != 0) {
+      } else if (el.deltaY < -0.1 && position != 0) {
         position--;
         container.classList.replace(
           `position--${prevPosition}`,
@@ -95,21 +95,67 @@ function addEventListener() {
         addEventListener();
       }, 1200);
     },
-    { passive : true,
-      once: true }
+    { passive: true, once: true }
   );
 }
 
-document.addEventListener('mousemove', function(e) {
-  container.style.left = `${vw(5) - e.clientX*0.1}px`
-  container.style.top = `${vh(5) - e.clientY*0.1}px`
-  document.querySelector('.title__view--home').style.transform = `translate(${e.clientX*0.05}px, ${e.clientY*0.05}px)`
+document.addEventListener("mousemove", function (e) {
+  container.style.left = `${vw(5) - e.clientX * 0.1}px`;
+  container.style.top = `${vh(5) - e.clientY * 0.1}px`;
+  document.querySelector(".title__view--home").style.transform = `translate(${
+    e.clientX * 0.05
+  }px, ${e.clientY * 0.05}px)`;
 
-  if(e.clientX < 20 || e.clientX > window.innerWidth - 20 || e.clientY < 20 || e.clientY > window.innerHeight - 20) {
-    console.log('triggered')
+  if (
+    e.clientX < 20 ||
+    e.clientX > window.innerWidth - 20 ||
+    e.clientY < 20 ||
+    e.clientY > window.innerHeight - 20
+  ) {
+    console.log("triggered");
   }
-})
-
+});
 
 addEventListener();
 
+var chapters = document.querySelectorAll('.chapter');
+
+for(let i = 0; i < 4; i++) {
+  var chapter = chapters[i];
+
+  chapter.addEventListener('mouseover', function(event) {
+    event.path[1].querySelectorAll('.element').forEach((element, index) => {
+      element.classList.add(`hovered--${index+1}`)
+    });
+  })
+  
+  chapter.addEventListener('mouseout', function() {
+    event.path[1].querySelectorAll('.element').forEach((element, index) => {
+      element.classList.remove(`hovered--${index+1}`)
+    });
+  })
+}
+
+/* var addHover = function(targets) {
+  for(let i = 0; i < 4; i++) {
+    targets = target[i];
+    target.addEventListener('mouseover', function() {
+      target.classList.add(`hovered--${i}`);
+    })
+  }
+} */
+
+/* for (i = 0; i < test.length; i++) {
+  test[i].addEventListener("mouseover", function (target) {
+    for (a = 0; a < test.length; a++) {
+      test[a].classList.add("hovered--1");
+    }
+  });
+}
+for (i = 0; i < test.length; i++) {
+  test[i].addEventListener("mouseout", function (target) {
+    for (a = 0; a < test.length; a++) {
+      test[a].classList.remove("hovered--1");
+    }
+  });
+} */
