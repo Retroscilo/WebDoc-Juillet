@@ -37,7 +37,7 @@ SUMMARY
 */
 
 body {
-  // overflow: hidden; /* Hide scrollbars */
+  overflow: hidden; /* Hide scrollbars */
 }
 
 /*
@@ -94,6 +94,8 @@ View Number {
 .view--home {
   background: no-repeat url('/assets/img/Leviathan.png');
   background-size: contain;
+  background-position: center;
+  z-index: -2;
 
   .view--home__element--1 {
     background: no-repeat url("/assets/img/home/police/icionnoie.png");
@@ -430,4 +432,8 @@ Title general styling {
     @include smaller-screen {
       transform: rotate(-2deg) scale(0.8) translate(40px, 100px) !important;
     }
+}
+
+.chapter .element:hover {
+  cursor: pointer;
 }

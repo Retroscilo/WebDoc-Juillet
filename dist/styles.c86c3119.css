@@ -70,6 +70,11 @@ SUMMARY
 
 #POSITION -> Handle positions in viewport for js
 */
+body {
+  overflow: hidden;
+  /* Hide scrollbars */
+}
+
 /*
 #VIEW Section
 
@@ -120,6 +125,8 @@ View Number {
 .view--home {
   background: no-repeat url("/Leviathan.05681a06.png");
   background-size: contain;
+  background-position: center;
+  z-index: -2;
 }
 .view--home .view--home__element--1 {
   background: no-repeat url("/icionnoie.fc5d065e.png");
@@ -422,6 +429,10 @@ Title general styling {
   .hovered--3 {
     transform: rotate(-2deg) scale(0.8) translate(40px, 100px) !important;
   }
+}
+
+.chapter .element:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=/styles.c86c3119.css.map */

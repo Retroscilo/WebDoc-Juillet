@@ -77,6 +77,8 @@ function addEventListener() {
   window.addEventListener(
     "wheel",
     function (el) {
+      console.log(position)
+      if (position == 0) return;
       var prevPosition = position;
       if (el.deltaY > 0.1) {
         position++;
@@ -118,44 +120,40 @@ document.addEventListener("mousemove", function (e) {
 
 addEventListener();
 
-var chapters = document.querySelectorAll('.chapter');
+var chapters = document.querySelectorAll(".chapter");
 
-for(let i = 0; i < 4; i++) {
+for (let i = 0; i < 4; i++) {
   var chapter = chapters[i];
 
-  chapter.addEventListener('mouseover', function(event) {
-    event.path[1].querySelectorAll('.element').forEach((element, index) => {
-      element.classList.add(`hovered--${index+1}`)
+  chapter.addEventListener("mouseover", function (event) {
+    event.path[1].querySelectorAll(".element").forEach((element, index) => {
+      element.classList.add(`hovered--${index + 1}`);
     });
-  })
-  
-  chapter.addEventListener('mouseout', function() {
-    event.path[1].querySelectorAll('.element').forEach((element, index) => {
-      element.classList.remove(`hovered--${index+1}`)
+  });
+
+  chapter.addEventListener("mouseout", function () {
+    event.path[1].querySelectorAll(".element").forEach((element, index) => {
+      element.classList.remove(`hovered--${index + 1}`);
     });
-  })
-}
+  });
 
-/* var addHover = function(targets) {
-  for(let i = 0; i < 4; i++) {
-    targets = target[i];
-    target.addEventListener('mouseover', function() {
-      target.classList.add(`hovered--${i}`);
-    })
-  }
-} */
-
-/* for (i = 0; i < test.length; i++) {
-  test[i].addEventListener("mouseover", function (target) {
-    for (a = 0; a < test.length; a++) {
-      test[a].classList.add("hovered--1");
+  chapter.addEventListener("click", function () {
+    var prevPosition = position;
+    switch (i) {
+      case 0:
+        position = 1;
+        break;
+      case 1:
+        position = 5;
+        break;
+      case 2:
+        position = 6;
+      case 3:
+        position = 9;
     }
+    container.classList.replace(
+      `position--${prevPosition}`,
+      `position--${position}`
+    );
   });
 }
-for (i = 0; i < test.length; i++) {
-  test[i].addEventListener("mouseout", function (target) {
-    for (a = 0; a < test.length; a++) {
-      test[a].classList.remove("hovered--1");
-    }
-  });
-} */
