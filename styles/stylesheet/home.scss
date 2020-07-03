@@ -34,10 +34,10 @@
 
   .view--home__element--2 {
     background: no-repeat url("/assets/img/home/malikoussekine.png");
-    width: 200px;
+    width: 300px;
     background-position: center;
-    height: 200px;
-    top: 19%;
+    height: 300px;
+    top: 15%;
     left: 8%;
 
     @include smaller-screen {
@@ -52,9 +52,10 @@
   }
 
   .view--home__element--4 {
-    background: no-repeat url("/assets/img/home/icionnoie.png");
+    background: no-repeat url("/assets/img/home/zyed2.png");
+    background-size: contain;
     top: 15%;
-    right: 8%;
+    right: 12%;
     width: 300px;
     height: 250px;
   }
@@ -62,20 +63,21 @@
   .view--home__element--5 {
     background: no-repeat url("/assets/img/home/bouna.png");
     width: 400px;
+    background-size: contain;
     background-position: center;
     height: 220px;
-    top: 11%;
+    top: 8%;
     right: 14%;
   }
 
   .view--home__element--6 {
     top: 15%;
     right: 12%;
-    transform: rotate(6deg) scale(0.8);
+    transform: rotate(3deg) scale(0.9);
   }
 
   .view--home__element--7 {
-    background: no-repeat url("/assets/img/home/Police.png");
+    background: center no-repeat url("/assets/img/home/unSeulHeros.png");
     bottom: 10%;
     right: 16%;
     width: 300px;
@@ -95,12 +97,7 @@
   .view--home__element--9 {
     bottom: 15%;
     right: 18%;
-    width: 410px;
-    transform: rotate(-2deg) scale(0.9);
-
-    @include smaller-screen {
-      transform: rotate(-2deg) scale(0.8);
-    }
+    transform: rotate(4deg) scale(0.8);
   }
 
   .view--home__element--10 {
@@ -124,7 +121,12 @@
   .view--home__element--12 {
     bottom: 14%;
     left: 14%;
-    transform: rotate(3deg) scale(0.9);
+    width: 410px;
+    transform: rotate(-2deg) scale(0.9);
+
+    @include smaller-screen {
+      transform: rotate(-2deg) scale(0.8);
+    }
   }
 }
 

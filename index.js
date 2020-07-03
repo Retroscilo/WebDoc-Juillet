@@ -97,9 +97,9 @@ disableScroll();
   |   |.'.'  |   ___....---   |        ||____......---| (_
   |   |_     |____....----''''|        ||''''|____||_.|  _|
   :    _)    |     __....-.   |        ||'''''       || (_
-   :  |_     |     |_....-'   |   grp  ||o o o       ||   |
-    '  _)    |____....----''''|  --''  ||____......---|  o|
-    '.|      | ___....----'': |   /\   ||''''|____||_.|   |
+   :  |_     |     |_....-'   |   GOD  ||o o o       ||   |
+    '  _)    |____....----''''|  BLESS ||____......---|  o|
+    '.|      | ___....----'': |   ME   ||''''|____||_.|   |
      '|o     | |__....----''' |  /__\  :.'''''           _|
       |  .   :____....----'''''  ______......------''''''
       |   _____......------''''''
@@ -121,7 +121,7 @@ function addEventListener(array) {
     function (el) {
         var prevPosition = array[index];
         var position;
-        if (el.deltaY > 0.1 && array[index] < array.length) {
+        if (el.deltaY > 0.1 && index < array.length) {
           index++;
           position = array[index]
           container.classList.replace(

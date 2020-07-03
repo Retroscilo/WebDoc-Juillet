@@ -1,24 +1,29 @@
 @import "variables.scss";
 @import "mixins.scss";
 
-.title.title__view--1 {
-  position: relative;
-  top: 200px;
-  left: 180px;
+.container__chapter--1 {
 
-  &:first-child {
-    top: 30px;
-    left: -600px;
+  .title__view--1 {
+    position: relative;
+    top: 200px;
+    left: 180px;
+  
+    &:first-child {
+      top: 30px;
+      left: -600px;
+    }
+  }
+  
+  .title__view--3 {
+    top: 75px;
+  
+    @include smaller-screen {
+      left: 170px;
+    }
   }
 }
 
-.title.title__view--3 {
-  top: 75px;
 
-  @include smaller-screen {
-    left: 170px;
-  }
-}
 
 .container__chapter--1 .view--1 {
 
@@ -47,31 +52,21 @@
   }
 
   .view--1__element--3 {
-    background: no-repeat url("/assets/img/texturePaper.png");
-    background-size: cover;
     width: 400px;
     height: 350px;
     left: 100px;
     top: 490px;
-    font-family: 'Pragati Narrow', sans-serif;
-    font-size: $base-font-size;
     padding: 20px 30px;
-    line-height: 130%;
   }
 }
 
 .container__chapter--1 .view--2 {
 
   .view--2__element--1 {
-    background: no-repeat url("/assets/img/texturePaper.png");
-    background-size: cover;
     top: 25px;
     left: 230px;
     width: 450px;
     padding: 20px 80px 20px 30px;
-    line-height: 130%;
-    font-size: $base-font-size;
-    font-family: 'Pragati Narrow', sans-serif;
   }
 
   .view--2__element--2 {
@@ -91,15 +86,10 @@
 .container__chapter--1 .view--3 {
 
   .view--3__element--1 {
-    background: no-repeat url("/assets/img/texturePaper.png");
-    background-size: cover;
     top: 365px;
     left: 375px;
     width: 550px;
     padding: 50px 30px 20px 30px;
-    line-height: $base-line-height;
-    font-size: $base-font-size;
-    font-family: 'Pragati Narrow', sans-serif;
   }
   
   .view--3__element--2 {

@@ -19,10 +19,6 @@
   transform: translate(-535vw, -775vh);
 }
 
-.position--4 {
-  transform: translate(-555vw, -345vh);
-}
-
 .view--home {
   left: 445vw;
   top: 445vh;
@@ -53,4 +49,18 @@
     top: 340vh;
     left: 550vw;
   }
+
+  .view--2 {
+    top: 230vh;
+    left: 600vw;
+  }
+}
+
+
+.position--4 {
+  transform: translate(-555vw, -345vh);
+}
+
+.position--5 {
+  transform: translate(-605vw, -235vh);
 }

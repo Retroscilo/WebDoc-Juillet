@@ -1,0 +1,24 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.container__chapter--2 {
+  .view--1__element--2 {
+    background: center no-repeat url("/assets/img/chapitre--2/view--1/zyedetbouna.png");
+    width: 1000px;
+    height: 600px;
+    background-size: contain;
+    left: 16%;
+    top: 12%;
+  }
+
+  .view--1__element--1 {
+    width: 700px;
+    padding: 60px 30px 30px 30px;
+    left: 21%;
+    top: 60%;
+  }
+
+  .title__view--1 {
+    top: 4%;
+  }
+}

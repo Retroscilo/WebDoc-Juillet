@@ -2,7 +2,7 @@
 @import "mixins.scss";
 
 body {
-  overflow: hidden; /* Hide scrollbars */
+  // overflow: hidden; /* Hide scrollbars */
 }
 
 .view__container {
@@ -40,6 +40,10 @@ body {
 
   .text {
     background: no-repeat url("/assets/img/texturePaper.png");
+    background-size: cover;
+    font-family: $base-font-family-text;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
   }
 }
 
