@@ -1,0 +1,56 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+/** Positioning classes **/
+
+.position--0 {
+  transform: translate(-450vw, -450vh);
+}
+
+.position--1 {
+  transform: translate(-555vw, -555vh);
+}
+
+.position--2 {
+  transform: translate(-575vw, -665vh);
+}
+
+.position--3 {
+  transform: translate(-535vw, -775vh);
+}
+
+.position--4 {
+  transform: translate(-555vw, -345vh);
+}
+
+.view--home {
+  left: 445vw;
+  top: 445vh;
+}
+
+.container__chapter--1 {
+
+  .view--1 {
+    // min gap
+    top: 555vh;
+    left: 560vw;
+  }
+
+  .view--2 {
+    top: 670vh;
+    left: 580vw;
+  }
+
+  .view--3 {
+    top: 780vh;
+    left: 540vw;
+  }
+} 
+
+.container__chapter--2 {
+
+  .view--1 {
+    top: 340vh;
+    left: 550vw;
+  }
+}

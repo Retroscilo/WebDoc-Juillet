@@ -194,27 +194,70 @@ disableScroll();
 /*********************** Start navigation ********************************** */
 
 /************************************************************************** */
+// Prière au bon seigneur des devs de ne jamais me forcer à revenir sur ce code, merci :)
+
+/*
+                          ______......------.
+  ______......------''''''                   -.
+  \                                            -.
+  |\                                             -.
+  | \                                              -.
+  |  \                                               -.
+  |   \                                                - __
+  |    \                         ______......------'''''' |
+  |   __\______......------''''''  o   ______......---.o  |
+  |   | .  o -=-- . |O|O| . O     '    ||o o o       ||   |
+  |   |o                               ||____......---|   |
+  |   |       ____.... ....---         ||''''|____||_.|   |
+  |   |       ....---- ----'''         ||'''''       ||  |'.
+  |   ||'.    ....---- ----'''         ||o o o       ||  '. |
+  |   |'. |   ....---- ----'''         ||____......---|   | |
+  |   | | |   ....---- ----'''         ||''''|____||_.|   | |
+  |   | | |   ....---- ----'''         ||'''''       ||   | |
+  |   | | |   ....---- ----'''         ||o o o       ||   | |
+  |   | | |   ....---- ----'''         ||____......---|   | |
+  |   | | |   ....---- ----'''         ||''''|____||_.|   | |
+  |   | | |                            ||'''''       ||  .'.'
+  |   | | |   ____....----''''|        ||o o o       ||  _|
+  |   |.'.'  |   ___....---   |        ||____......---| (_
+  |   |_     |____....----''''|        ||''''|____||_.|  _|
+  :    _)    |     __....-.   |        ||'''''       || (_
+   :  |_     |     |_....-'   |   grp  ||o o o       ||   |
+    '  _)    |____....----''''|  --''  ||____......---|  o|
+    '.|      | ___....----'': |   /\   ||''''|____||_.|   |
+     '|o     | |__....----''' |  /__\  :.'''''           _|
+      |  .   :____....----'''''  ______......------''''''
+      |   _____......------''''''
+       '''
+*/
 
 var container = document.querySelector(".view__container");
-var position = 0;
+var positions = [[7, 8, 9, 10, 11], [4, 5, 6], [1, 2, 3], [12, 13, 14, 15]];
+var index = 0;
 
-function addEventListener() {
+function addEventListener(array) {
   window.addEventListener("wheel", function (el) {
-    console.log(position);
-    if (position == 0) return;
-    var prevPosition = position;
+    var prevPosition = array[index];
+    var position;
 
-    if (el.deltaY > 0.1) {
-      position++;
+    if (el.deltaY > 0.1 && array[index] < array.length) {
+      index++;
+      position = array[index];
       container.classList.replace("position--".concat(prevPosition), "position--".concat(position));
-    } else if (el.deltaY < -0.1 && position != 0) {
-      position--;
+    } else if (el.deltaY < -0.1) {
+      if (index == 0) {
+        container.classList.replace("position--".concat(prevPosition), "position--0");
+        return;
+      }
+
+      index--;
+      position = array[index];
       container.classList.replace("position--".concat(prevPosition), "position--".concat(position));
     }
 
     setTimeout(function () {
-      addEventListener();
-    }, 1200);
+      addEventListener(array);
+    }, 2000);
   }, {
     passive: true,
     once: true
@@ -224,54 +267,29 @@ function addEventListener() {
 document.addEventListener("mousemove", function (e) {
   container.style.left = "".concat(vw(5) - e.clientX * 0.1, "px");
   container.style.top = "".concat(vh(5) - e.clientY * 0.1, "px");
-  document.querySelector(".title__view--home").style.transform = "translate(".concat(e.clientX * 0.05, "px, ").concat(e.clientY * 0.05, "px)");
-
-  if (e.clientX < 20 || e.clientX > window.innerWidth - 20 || e.clientY < 20 || e.clientY > window.innerHeight - 20) {
-    console.log("triggered");
-  }
+  document.querySelector(".title__view--home").style.transform = "translate(".concat(vh(5) - e.clientX * 0.05, "px, ").concat(vh(5) - e.clientY * 0.05, "px)");
 });
-addEventListener();
 var chapters = document.querySelectorAll(".chapter");
 
-var _loop = function _loop(i) {
-  chapter = chapters[i];
+for (var i = 0; i < 4; i++) {
+  var chapter = chapters[i];
   chapter.addEventListener("mouseover", function (event) {
     event.path[1].querySelectorAll(".element").forEach(function (element, index) {
       element.classList.add("hovered--".concat(index + 1));
     });
   });
-  chapter.addEventListener("mouseout", function () {
+  chapter.addEventListener("mouseout", function (event) {
     event.path[1].querySelectorAll(".element").forEach(function (element, index) {
       element.classList.remove("hovered--".concat(index + 1));
     });
   });
-  chapter.addEventListener("click", function () {
-    var prevPosition = position;
-
-    switch (i) {
-      case 0:
-        position = 1;
-        break;
-
-      case 1:
-        position = 5;
-        break;
-
-      case 2:
-        position = 6;
-
-      case 3:
-        position = 9;
-    }
-
-    container.classList.replace("position--".concat(prevPosition), "position--".concat(position));
+  chapter.addEventListener("click", function (target) {
+    var numChapter = target.path[1].dataset.chapter - 1;
+    container.classList.replace("position--0", "position--".concat(positions[numChapter][0]));
+    setTimeout(function () {
+      addEventListener(positions[numChapter]);
+    }, 2000);
   });
-};
-
-for (var i = 0; i < 4; i++) {
-  var chapter;
-
-  _loop(i);
 }
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -301,7 +319,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51884" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50778" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

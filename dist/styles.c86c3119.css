@@ -57,44 +57,13 @@ table {
 
 body {
   overflow: hidden;
-}
-
-/*
-SUMMARY
-
-#VIEW -> Style for view and its elements
-
-#TITLE -> Style for title only
-
-#PIN -> Style for pin
-
-#POSITION -> Handle positions in viewport for js
-*/
-body {
-  overflow: hidden;
   /* Hide scrollbars */
 }
 
-/*
-#VIEW Section
-
-Container styling;
-
-View general styling { 
-  (absolute)
-  element general styling;
-}
-
-View Number {
-  view--number__element--number styling;
-}
-
-!important: For Title styling refer to Title section
-*/
 .view__container {
   position: absolute;
-  height: 500vh;
-  width: 500vw;
+  height: 1000vh;
+  width: 1000vw;
   transition: transform 2s ease-in-out;
   background: url("/textureContainer.9936b3ee.jpg");
 }
@@ -109,7 +78,7 @@ View Number {
   transition: transform 0.5s ease-in-out;
 }
 .view .paper {
-  background: no-repeat url("/Paper.e94b08b6.png");
+  background: no-repeat url("/Paper.47f596f8.png");
   background-size: cover;
   display: flex;
   font-family: "Lacquer", cursive, cursive;
@@ -121,297 +90,8 @@ View Number {
   width: 380px;
   height: 135px;
 }
-
-.view--home {
-  background: no-repeat url("/Leviathan.05681a06.png");
-  background-size: contain;
-  background-position: center;
-  z-index: -2;
-}
-.view--home .view--home__element--1 {
-  background: no-repeat url("/icionnoie.fc5d065e.png");
-  background-size: contain;
-  top: 19%;
-  left: 10%;
-  width: 400px;
-  height: 250px;
-}
-@media (max-width: 1600px) {
-  .view--home .view--home__element--1 {
-    width: 300px;
-  }
-}
-.view--home .view--home__element--2 {
-  background: no-repeat url("/unSeulHeros.1ec46638.png");
-  width: 200px;
-  background-position: center;
-  height: 200px;
-  top: 19%;
-  left: 8%;
-}
-@media (max-width: 1600px) {
-  .view--home .view--home__element--2 {
-    width: 300px;
-  }
-}
-.view--home .view--home__element--3 {
-  top: 25%;
-  left: 7%;
-  width: 410px;
-  transform: rotate(-2deg) scale(0.9);
-}
-@media (max-width: 1600px) {
-  .view--home .view--home__element--3 {
-    transform: rotate(-2deg) scale(0.8);
-  }
-}
-.view--home .view--home__element--4 {
-  background: no-repeat url("/icionnoie.fc5d065e.png");
-  top: 15%;
-  right: 8%;
-  width: 300px;
-  height: 250px;
-}
-.view--home .view--home__element--5 {
-  background: no-repeat url("/bouna.e37c61af.png");
-  width: 400px;
-  background-position: center;
-  height: 220px;
-  top: 11%;
-  right: 14%;
-}
-.view--home .view--home__element--6 {
-  top: 15%;
-  right: 12%;
-  transform: rotate(6deg) scale(0.8);
-}
-.view--home .view--home__element--7 {
-  background: no-repeat url("/icionnoie.fc5d065e.png");
-  bottom: 10%;
-  right: 18%;
-  width: 300px;
-  height: 250px;
-}
-.view--home .view--home__element--8 {
-  background: no-repeat url("/MalikOussekine.ecf921fa.png");
-  width: 500px;
-  background-position: center;
-  height: 300px;
-  bottom: 10%;
-  right: 18%;
-}
-.view--home .view--home__element--9 {
-  bottom: 15%;
-  right: 18%;
-  transform: rotate(-8deg) scale(0.8);
-}
-.view--home .view--home__element--10 {
-  background: no-repeat url("/icionnoie.fc5d065e.png");
-  bottom: 10%;
-  left: 18%;
-  width: 300px;
-  height: 250px;
-}
-.view--home .view--home__element--11 {
-  background: no-repeat url("/Police.2b604512.png");
-  width: 300px;
-  background-position: center;
-  height: 200px;
-  bottom: 12%;
-  left: 12%;
-}
-.view--home .view--home__element--12 {
-  bottom: 14%;
-  left: 14%;
-  transform: rotate(3deg) scale(0.9);
-}
-
-.view--1 .view--1__element--1 {
-  background: no-repeat url("/icionnoie 1.c12d754e.png");
-  background-size: cover;
-  background-position: center;
-  width: 900px;
-  height: 400px;
-  top: 12%;
-  left: -2%;
-}
-@media (max-width: 1600px) {
-  .view--1 .view--1__element--1 {
-    width: 600px;
-  }
-}
-.view--1 .view--1__element--2 {
-  right: 20%;
-  top: 380px;
-}
-@media (max-width: 1600px) {
-  .view--1 .view--1__element--2 {
-    right: 35%;
-    width: 500px;
-  }
-}
-.view--1 .view--1__element--3 {
+.view .text {
   background: no-repeat url("/texturePaper.64ba02f1.png");
-  background-size: cover;
-  width: 400px;
-  height: 350px;
-  left: 100px;
-  top: 490px;
-  font-family: "Pragati Narrow", sans-serif;
-  font-size: 30px;
-  padding: 20px 30px;
-  line-height: 130%;
-}
-.view--1 .view--1__element--3 span {
-  position: relative;
-}
-.view--1 .view--1__element--3 span::after {
-  content: "";
-  position: absolute;
-  background: BLACK;
-  top: 18px;
-  left: 0;
-  width: 143px;
-  height: 20px;
-  transform-origin: right;
-  transform: scaleX();
-  transition: all 0.7s;
-}
-
-.view--2 .view--2__element--1 {
-  background: no-repeat url("/texturePaper.64ba02f1.png");
-  background-size: cover;
-  top: 25px;
-  left: 230px;
-  width: 450px;
-  padding: 20px 80px 20px 30px;
-  line-height: 130%;
-  font-size: 30px;
-  font-family: "Pragati Narrow", sans-serif;
-}
-.view--2 .view--2__element--2 {
-  top: 95px;
-  left: 740px;
-  width: 500px;
-  height: 500px;
-  background: no-repeat url("/algeriens17octobre.40670bb2.png");
-}
-.view--2 .view--2__element--3 {
-  bottom: 150px;
-  left: 680px;
-}
-
-.view--3 .view--3__element--1 {
-  background: no-repeat url("/texturePaper.64ba02f1.png");
-  background-size: cover;
-  top: 365px;
-  left: 375px;
-  width: 550px;
-  padding: 50px 30px 20px 30px;
-  line-height: 130%;
-  font-size: 30px;
-  font-family: "Pragati Narrow", sans-serif;
-}
-.view--3 .view--3__element--2 {
-  background: no-repeat url("/mauricepaponjuges.11ae9725.png");
-  background-size: cover;
-  width: 600px;
-  height: 350px;
-  left: 75px;
-  top: 40px;
-}
-.view--3 .view--3__element--3 {
-  left: 775px;
-  top: 250px;
-}
-
-/******************** View styling END *********************/
-/*
-#TITLE Section
-
-Title general styling {
-  title__view--number styling;
-}
-
-!important: for pin styling, refer to pin section
-*/
-.title {
-  position: relative;
-  font-family: "Lacquer", cursive;
-  font-size: 75px;
-  color: #f33a3a;
-  text-align: center;
-}
-.title.title__view--home {
-  font-size: 105px;
-  font-family: "Staatliches", cursive;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  stroke-dasharray: 10000;
-  stroke-dashoffset: 10000;
-  animation: dash 20s ease-in-out forwards;
-}
-.title.title__view--1 {
-  position: relative;
-  top: 200px;
-  left: 180px;
-}
-.title.title__view--1:first-child {
-  top: 30px;
-  left: -600px;
-}
-.title.title__view--3 {
-  top: 75px;
-}
-@media (max-width: 1600px) {
-  .title.title__view--3 {
-    left: 170px;
-  }
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-/******************** Title styling END *********************/
-/** Positioning classes **/
-.position--0 {
-  transform: translate(-5vw, -5vh);
-}
-
-.position--1 {
-  transform: translate(-105vw, -105vh);
-}
-
-.position--2 {
-  transform: translate(-125vw, -215vh);
-}
-
-.position--3 {
-  transform: translate(-85vw, -325vh);
-}
-
-.view--home {
-  left: 0vw;
-  top: 0vh;
-}
-
-.view--1 {
-  top: 110vh;
-  left: 110vw;
-}
-
-.view--2 {
-  top: 220vh;
-  left: 130vw;
-}
-
-.view--3 {
-  top: 330vh;
-  left: 90vw;
 }
 
 .hovered--1 {
@@ -433,6 +113,284 @@ Title general styling {
 
 .chapter .element:hover {
   cursor: pointer;
+}
+
+.title {
+  position: relative;
+  font-family: "Lacquer", cursive;
+  font-size: 75px;
+  color: #f33a3a;
+  text-align: center;
+}
+
+.title.title__view--home {
+  font-size: 105px;
+  font-family: "Staatliches", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  stroke-dasharray: 10000;
+  stroke-dashoffset: 10000;
+  animation: dash 20s ease-in-out forwards;
+}
+
+.view--home {
+  background: no-repeat url("/Leviathan.05681a06.png");
+  background-size: contain;
+  background-position: center;
+  z-index: -2;
+}
+.view--home .view--home__element--1 {
+  background: no-repeat url("/malik2.fc4ef5b2.png");
+  background-size: contain;
+  top: 19%;
+  left: 10%;
+  width: 400px;
+  height: 250px;
+}
+@media (max-width: 1600px) {
+  .view--home .view--home__element--1 {
+    width: 300px;
+  }
+}
+.view--home .view--home__element--2 {
+  background: no-repeat url("/malikoussekine.5539e0e9.png");
+  width: 200px;
+  background-position: center;
+  height: 200px;
+  top: 19%;
+  left: 8%;
+}
+@media (max-width: 1600px) {
+  .view--home .view--home__element--2 {
+    width: 300px;
+  }
+}
+.view--home .view--home__element--3 {
+  top: 25%;
+  left: 7%;
+  transform: rotate(-8deg) scale(0.8);
+}
+.view--home .view--home__element--4 {
+  background: no-repeat url("/icionnoie.f077f6a0.png");
+  top: 15%;
+  right: 8%;
+  width: 300px;
+  height: 250px;
+}
+.view--home .view--home__element--5 {
+  background: no-repeat url("/bouna.e37c61af.png");
+  width: 400px;
+  background-position: center;
+  height: 220px;
+  top: 11%;
+  right: 14%;
+}
+.view--home .view--home__element--6 {
+  top: 15%;
+  right: 12%;
+  transform: rotate(6deg) scale(0.8);
+}
+.view--home .view--home__element--7 {
+  background: no-repeat url("/Police.2b604512.png");
+  bottom: 10%;
+  right: 16%;
+  width: 300px;
+  height: 250px;
+}
+.view--home .view--home__element--8 {
+  background: no-repeat url("/icionnoie.f077f6a0.png");
+  width: 400px;
+  background-position: center;
+  background-size: contain;
+  height: 300px;
+  bottom: 10%;
+  right: 21%;
+}
+.view--home .view--home__element--9 {
+  bottom: 15%;
+  right: 18%;
+  width: 410px;
+  transform: rotate(-2deg) scale(0.9);
+}
+@media (max-width: 1600px) {
+  .view--home .view--home__element--9 {
+    transform: rotate(-2deg) scale(0.8);
+  }
+}
+.view--home .view--home__element--10 {
+  background: no-repeat url("/Police.2b604512.png");
+  bottom: 10%;
+  left: 18%;
+  width: 300px;
+  height: 250px;
+}
+.view--home .view--home__element--11 {
+  background: no-repeat url("/police2.31de93e0.png");
+  width: 300px;
+  background-position: center;
+  height: 200px;
+  bottom: 12%;
+  left: 12%;
+  transform: rotate(-4deg);
+}
+.view--home .view--home__element--12 {
+  bottom: 14%;
+  left: 14%;
+  transform: rotate(3deg) scale(0.9);
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+/** Positioning classes **/
+.position--0 {
+  transform: translate(-450vw, -450vh);
+}
+
+.position--1 {
+  transform: translate(-555vw, -555vh);
+}
+
+.position--2 {
+  transform: translate(-575vw, -665vh);
+}
+
+.position--3 {
+  transform: translate(-535vw, -775vh);
+}
+
+.position--4 {
+  transform: translate(-555vw, -345vh);
+}
+
+.view--home {
+  left: 445vw;
+  top: 445vh;
+}
+
+.container__chapter--1 .view--1 {
+  top: 555vh;
+  left: 560vw;
+}
+.container__chapter--1 .view--2 {
+  top: 670vh;
+  left: 580vw;
+}
+.container__chapter--1 .view--3 {
+  top: 780vh;
+  left: 540vw;
+}
+
+.container__chapter--2 .view--1 {
+  top: 340vh;
+  left: 550vw;
+}
+
+.title.title__view--1 {
+  position: relative;
+  top: 200px;
+  left: 180px;
+}
+.title.title__view--1:first-child {
+  top: 30px;
+  left: -600px;
+}
+
+.title.title__view--3 {
+  top: 75px;
+}
+@media (max-width: 1600px) {
+  .title.title__view--3 {
+    left: 170px;
+  }
+}
+
+.container__chapter--1 .view--1 .view--1__element--1 {
+  background: no-repeat url("/icionnoie.879a6e41.png");
+  background-size: cover;
+  background-position: center;
+  width: 900px;
+  height: 400px;
+  top: 12%;
+  left: -2%;
+}
+@media (max-width: 1600px) {
+  .container__chapter--1 .view--1 .view--1__element--1 {
+    width: 600px;
+  }
+}
+.container__chapter--1 .view--1 .view--1__element--2 {
+  right: 20%;
+  top: 380px;
+}
+@media (max-width: 1600px) {
+  .container__chapter--1 .view--1 .view--1__element--2 {
+    right: 35%;
+    width: 500px;
+  }
+}
+.container__chapter--1 .view--1 .view--1__element--3 {
+  background: no-repeat url("/texturePaper.64ba02f1.png");
+  background-size: cover;
+  width: 400px;
+  height: 350px;
+  left: 100px;
+  top: 490px;
+  font-family: "Pragati Narrow", sans-serif;
+  font-size: 30px;
+  padding: 20px 30px;
+  line-height: 130%;
+}
+
+.container__chapter--1 .view--2 .view--2__element--1 {
+  background: no-repeat url("/texturePaper.64ba02f1.png");
+  background-size: cover;
+  top: 25px;
+  left: 230px;
+  width: 450px;
+  padding: 20px 80px 20px 30px;
+  line-height: 130%;
+  font-size: 30px;
+  font-family: "Pragati Narrow", sans-serif;
+}
+.container__chapter--1 .view--2 .view--2__element--2 {
+  top: 95px;
+  left: 740px;
+  width: 500px;
+  height: 500px;
+  background: no-repeat url("/algeriens17octobre.ac4752e7.png");
+}
+.container__chapter--1 .view--2 .view--2__element--3 {
+  bottom: 150px;
+  left: 680px;
+}
+
+.container__chapter--1 .view--3 .view--3__element--1 {
+  background: no-repeat url("/texturePaper.64ba02f1.png");
+  background-size: cover;
+  top: 365px;
+  left: 375px;
+  width: 550px;
+  padding: 50px 30px 20px 30px;
+  line-height: 130%;
+  font-size: 30px;
+  font-family: "Pragati Narrow", sans-serif;
+}
+.container__chapter--1 .view--3 .view--3__element--2 {
+  background: no-repeat url("/mauricepaponjuges.8cbe5131.png");
+  background-size: cover;
+  width: 600px;
+  height: 350px;
+  left: 75px;
+  top: 40px;
+}
+.container__chapter--1 .view--3 .view--3__element--3 {
+  left: 775px;
+  top: 250px;
 }
 
 /*# sourceMappingURL=/styles.c86c3119.css.map */

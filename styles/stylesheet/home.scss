@@ -1,0 +1,135 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.title.title__view--home {
+  font-size: 105px;
+  font-family: "Staatliches", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  stroke-dasharray: 10000;
+  stroke-dashoffset: 10000;
+  animation: dash 20s ease-in-out forwards;
+}
+
+.view--home {
+  background: no-repeat url('/assets/img/Leviathan.png');
+  background-size: contain;
+  background-position: center;
+  z-index: -2;
+
+  .view--home__element--1 {
+    background: no-repeat url("/assets/img/home/malik2.png");
+    background-size: contain;
+    top: 19%;
+    left: 10%;
+    width: 400px;
+    height: 250px;
+
+    @include smaller-screen {
+      width: 300px;
+    }
+  }
+
+  .view--home__element--2 {
+    background: no-repeat url("/assets/img/home/malikoussekine.png");
+    width: 200px;
+    background-position: center;
+    height: 200px;
+    top: 19%;
+    left: 8%;
+
+    @include smaller-screen {
+      width: 300px;
+    }
+  }
+
+  .view--home__element--3 {
+    top: 25%;
+    left: 7%;
+    transform: rotate(-8deg) scale(0.8);
+  }
+
+  .view--home__element--4 {
+    background: no-repeat url("/assets/img/home/icionnoie.png");
+    top: 15%;
+    right: 8%;
+    width: 300px;
+    height: 250px;
+  }
+
+  .view--home__element--5 {
+    background: no-repeat url("/assets/img/home/bouna.png");
+    width: 400px;
+    background-position: center;
+    height: 220px;
+    top: 11%;
+    right: 14%;
+  }
+
+  .view--home__element--6 {
+    top: 15%;
+    right: 12%;
+    transform: rotate(6deg) scale(0.8);
+  }
+
+  .view--home__element--7 {
+    background: no-repeat url("/assets/img/home/Police.png");
+    bottom: 10%;
+    right: 16%;
+    width: 300px;
+    height: 250px;
+  }
+
+  .view--home__element--8 {
+    background: no-repeat url("/assets/img/home/icionnoie.png");
+    width: 400px;
+    background-position: center;
+    background-size: contain;
+    height: 300px;
+    bottom: 10%;
+    right: 21%;
+  }
+
+  .view--home__element--9 {
+    bottom: 15%;
+    right: 18%;
+    width: 410px;
+    transform: rotate(-2deg) scale(0.9);
+
+    @include smaller-screen {
+      transform: rotate(-2deg) scale(0.8);
+    }
+  }
+
+  .view--home__element--10 {
+    background: no-repeat url("/assets/img/home/Police.png");
+    bottom: 10%;
+    left: 18%;
+    width: 300px;
+    height: 250px;
+  }
+
+  .view--home__element--11 {
+    background: no-repeat url("/assets/img/home/police2.png");
+    width: 300px;
+    background-position: center;
+    height: 200px;
+    bottom: 12%;
+    left: 12%;
+    transform: rotate(-4deg)
+  }
+
+  .view--home__element--12 {
+    bottom: 14%;
+    left: 14%;
+    transform: rotate(3deg) scale(0.9);
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
