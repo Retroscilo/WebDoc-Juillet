@@ -108,7 +108,7 @@ disableScroll();
 
 var container = document.querySelector(".view__container");
 var positions = [
-  [18],
+  [13,14,15,16],
   [4,5,6,7,8],
   [1,2,3],
   [9,10,11,12]
@@ -145,7 +145,7 @@ function addEventListener(array) {
         } 
         setTimeout(() => {
           addEventListener(array);
-        }, 200); //HERE
+        }, 2000); 
     },
     { passive: true, once: true }
   );
@@ -184,6 +184,6 @@ for (let i = 0; i < 4; i++) {
     );
     setTimeout(() => {
       addEventListener(positions[numChapter]);
-    }, 200);
+    }, 2000);
   });
 }

@@ -232,7 +232,7 @@ disableScroll();
 */
 
 var container = document.querySelector(".view__container");
-var positions = [[18], [4, 5, 6, 7, 8], [1, 2, 3], [9, 10, 11, 12]];
+var positions = [[13, 14, 15, 16], [4, 5, 6, 7, 8], [1, 2, 3], [9, 10, 11, 12]];
 var index = 0;
 
 function addEventListener(array) {
@@ -257,7 +257,7 @@ function addEventListener(array) {
 
     setTimeout(function () {
       addEventListener(array);
-    }, 200); //HERE
+    }, 2000);
   }, {
     passive: true,
     once: true
@@ -288,7 +288,7 @@ for (var i = 0; i < 4; i++) {
     container.classList.replace("position--0", "position--".concat(positions[numChapter][0]));
     setTimeout(function () {
       addEventListener(positions[numChapter]);
-    }, 200);
+    }, 2000);
   });
 }
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -319,7 +319,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55232" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57228" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

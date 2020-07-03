@@ -1,0 +1,53 @@
+.container__chapter--4 {
+
+  .view--1__element--1 {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+  }
+
+  .view--2__element--1 {
+    width: 700px;
+    height: 500px;
+    top: 20%;
+    left: 200px;
+    background-size: contain;
+    background: center no-repeat url("/assets/img/chapitre--4/view--2/manifContreLoiDevaquet.png");
+  }
+
+  .view--2__element--2 {
+    width: 600px;
+    padding: 40px 40px 40px 80px;
+    top: 28%;
+    left: 810px;
+  }
+
+  .view--3__element--1 {
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .view--3__element--2 {
+    width: 900px;
+    padding: 40px;
+    top: 60%;
+    left: 50%;
+    font-size: 25px;
+    transform: translate(-50%);
+  }
+
+  .view--4__element--1 {
+    width: 600px;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%);
+    padding: 90px;
+  }
+
+  .view--4__element--2 {
+    left: 50%;
+    transform: translate(-50%);
+    top: 25%;
+  }
+}
