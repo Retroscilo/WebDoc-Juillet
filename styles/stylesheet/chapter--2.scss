@@ -47,4 +47,34 @@
   .title__view--3 {
     top: 8%;
   }
+
+  .view--4__element--1 {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .view--5__element--1 {
+    width: 500px;
+    padding: 30px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .view--5__element--2 {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .view--5__element--3 {
+    width: 900px;
+    font-family: $base-font-family-text;
+    font-size: 25px;
+    line-height: $base-line-height;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);
+    top: 55%;
+  }
 }

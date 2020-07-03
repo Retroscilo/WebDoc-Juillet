@@ -64,6 +64,16 @@
     left: 690vw;
     top: 330vh;
   }
+
+  .view--4 {
+    left: 730vw;
+    top: 440vh;
+  }
+
+  .view--5 {
+    left: 670vw;
+    top: 550vh;
+  }
 }
 
 .position--4 {
@@ -75,5 +85,54 @@
 }
 
 .position--6 {
-  transform: translate(-695vw, -5vh);
+  transform: translate(-695vw, -335vh);
+}
+
+.position--7 {
+  transform: translate(-735vw, -445vh);
+}
+
+.position--8 {
+  transform: translate(-675vw, -555vh);
+}
+
+// Chapter 3 
+
+.container__chapter--3 {
+
+  .view--1 {
+    left: 335vw;
+    top: 255vh;
+  }
+
+  .view--2 {
+    left: 295vw;
+    top: 365vh;
+  }
+
+  .view--3 {
+    left: 345vw;
+    top: 480vh;
+  }
+
+  .view--4 {
+    left: 405vw;
+    top: 595vh;
+  }
+}
+
+.position--9 {
+  transform: translate(-340vw, -260vh);
+}
+
+.position--10 {
+  transform: translate(-300vw, -370vh);
+}
+
+.position--11 {
+  transform: translate(-350vw, -485vh);
+}
+
+.position--12 {
+  transform: translate(-410vw, -600vh);
 }

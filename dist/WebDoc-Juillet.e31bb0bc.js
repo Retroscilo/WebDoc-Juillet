@@ -232,7 +232,7 @@ disableScroll();
 */
 
 var container = document.querySelector(".view__container");
-var positions = [[7, 8, 9, 10, 11], [4, 5, 6], [1, 2, 3], [12, 13, 14, 15]];
+var positions = [[18], [4, 5, 6, 7, 8], [1, 2, 3], [9, 10, 11, 12]];
 var index = 0;
 
 function addEventListener(array) {
@@ -240,7 +240,7 @@ function addEventListener(array) {
     var prevPosition = array[index];
     var position;
 
-    if (el.deltaY > 0.1 && index < array.length) {
+    if (el.deltaY > 0.1 && index < array.length - 1) {
       index++;
       position = array[index];
       container.classList.replace("position--".concat(prevPosition), "position--".concat(position));
@@ -257,7 +257,7 @@ function addEventListener(array) {
 
     setTimeout(function () {
       addEventListener(array);
-    }, 2000);
+    }, 200); //HERE
   }, {
     passive: true,
     once: true
@@ -288,7 +288,7 @@ for (var i = 0; i < 4; i++) {
     container.classList.replace("position--0", "position--".concat(positions[numChapter][0]));
     setTimeout(function () {
       addEventListener(positions[numChapter]);
-    }, 2000);
+    }, 200);
   });
 }
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -319,7 +319,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52333" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55232" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

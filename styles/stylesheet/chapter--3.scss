@@ -1,0 +1,77 @@
+.container__chapter--3 {
+  .view--1__element--1 {
+    width: 600px;
+    padding: 60px;
+    font-size: 25px;
+    top: 10%;
+    right: 22%;
+  }
+
+  .view--1__element--2 {
+    width: 800px;
+    height: 500px;
+    background: center no-repeat url("/assets/img/chapitre--3/view--1/policiers.png");
+    background-size: contain;
+    top: 12%;
+    left: 12%;
+  }
+
+  .view--1__element--3 {
+    left: 50%;
+    transform: translate(-50%);
+    top: 70%;
+  }
+
+  .view--2__element--1 {
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .view--2__element--2 {
+    width: 800px;
+    padding: 40px;
+    top: 67%;
+    left: 40%;
+    transform: translate(-45%);
+  }
+
+  .title__view--3 {
+   text-align: start;
+   left: 8%;
+   top: 100px;
+  }
+
+  .view--3__element--1 {
+    width: 500px;
+    top: 30%;
+    left: 6%;
+    padding: 40px;
+  }
+
+  .view--3__element--2 {
+    top: 38%;
+    left: 40%;
+  }
+
+  .view--4__element--1 {
+    width: 700px;
+    padding: 40Px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .view--4__element--2 {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .view--4__element--3 {
+    top: 50%;
+    left: 50%;
+    padding: 40Px;
+    transform: translate(-50%);
+  }
+}

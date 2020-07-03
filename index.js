@@ -108,10 +108,10 @@ disableScroll();
 
 var container = document.querySelector(".view__container");
 var positions = [
-  [7,8,9,10,11],
-  [4,5,6],
+  [18],
+  [4,5,6,7,8],
   [1,2,3],
-  [12,13,14,15]
+  [9,10,11,12]
 ]
 var index = 0;
 
@@ -121,7 +121,7 @@ function addEventListener(array) {
     function (el) {
         var prevPosition = array[index];
         var position;
-        if (el.deltaY > 0.1 && index < array.length) {
+        if (el.deltaY > 0.1 && index < array.length - 1) {
           index++;
           position = array[index]
           container.classList.replace(
@@ -145,7 +145,7 @@ function addEventListener(array) {
         } 
         setTimeout(() => {
           addEventListener(array);
-        }, 2000);
+        }, 200); //HERE
     },
     { passive: true, once: true }
   );
@@ -184,6 +184,6 @@ for (let i = 0; i < 4; i++) {
     );
     setTimeout(() => {
       addEventListener(positions[numChapter]);
-    }, 2000);
+    }, 200);
   });
 }
