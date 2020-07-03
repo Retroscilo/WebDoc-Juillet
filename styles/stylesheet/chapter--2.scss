@@ -21,4 +21,30 @@
   .title__view--1 {
     top: 4%;
   }
+
+  .view--2__element--1 {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .view--3__element--1 {
+    background: center no-repeat url("/assets/img/chapitre--2/view--3/police.png");
+    width: 800px;
+    height: 600px;
+    background-size: contain;
+    left: 16%;
+    top: 22%;
+  }
+
+  .view--3__element--2 {
+    width: 500px;
+    padding: 30px;
+    top: 34%;
+    left: 50%;
+  }
+
+  .title__view--3 {
+    top: 8%;
+  }
 }

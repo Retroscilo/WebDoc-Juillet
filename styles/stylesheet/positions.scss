@@ -3,64 +3,77 @@
 
 /** Positioning classes **/
 
-.position--0 {
-  transform: translate(-450vw, -450vh);
-}
-
-.position--1 {
-  transform: translate(-555vw, -555vh);
-}
-
-.position--2 {
-  transform: translate(-575vw, -665vh);
-}
-
-.position--3 {
-  transform: translate(-535vw, -775vh);
-}
-
+// Home
 .view--home {
   left: 445vw;
-  top: 445vh;
+  top: 145vh;
 }
+
+.position--0 {
+  transform: translate(-450vw, -150vh);
+}
+
+// Chapter 1
 
 .container__chapter--1 {
 
   .view--1 {
-    // min gap
-    top: 555vh;
-    left: 560vw;
+    top: 255vh;
+    left: 520vw;
   }
 
   .view--2 {
-    top: 670vh;
-    left: 580vw;
+    top: 370vh;
+    left: 490vw;
   }
 
   .view--3 {
-    top: 780vh;
-    left: 540vw;
+    top: 480vh;
+    left: 510vw;
   }
-} 
+}
+
+.position--1 {
+  transform: translate(-515vw, -255vh);
+}
+
+.position--2 {
+  transform: translate(-485vw, -365vh);
+}
+
+.position--3 {
+  transform: translate(-505vw, -475vh);
+}
+
+
+// Chapter 2
 
 .container__chapter--2 {
 
   .view--1 {
-    top: 340vh;
+    top: 140vh;
     left: 550vw;
   }
 
   .view--2 {
-    top: 230vh;
-    left: 600vw;
+    top: 210vh;
+    left: 650vw;
+  }
+
+  .view--3 {
+    left: 690vw;
+    top: 330vh;
   }
 }
 
-
 .position--4 {
-  transform: translate(-555vw, -345vh);
+  transform: translate(-555vw, -145vh);
 }
 
 .position--5 {
-  transform: translate(-605vw, -235vh);
+  transform: translate(-655vw, -215vh);
+}
+
+.position--6 {
+  transform: translate(-695vw, -5vh);
 }
