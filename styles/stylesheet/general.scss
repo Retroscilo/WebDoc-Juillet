@@ -2,7 +2,7 @@
 @import "mixins.scss";
 
 body {
-  // overflow: hidden; /* Hide scrollbars */
+  overflow: hidden; /* Hide scrollbars */
 }
 
 .view__container {
@@ -45,28 +45,6 @@ body {
     font-size: $base-font-size;
     line-height: $base-line-height;
   }
-}
-
-// Hover Classes
-
-.hovered--1 {
-  transform: translate(150px, -60px);
-}
-
-.hovered--2 {
-  transform: translate(-20px);
-}
-
-.hovered--3 {
-  transform: rotate(-2deg) scale(0.9) translate(40px, 100px) !important;
-
-    @include smaller-screen {
-      transform: rotate(-2deg) scale(0.8) translate(40px, 100px) !important;
-    }
-}
-
-.chapter .element:hover {
-  cursor: pointer;
 }
 
 .title {

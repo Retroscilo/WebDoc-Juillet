@@ -157,9 +157,40 @@ document.addEventListener("mousemove", function (e) {
   document.querySelector(".title__view--home").style.transform = `translate(${
     vh(5) - e.clientX * 0.05
   }px, ${vh(5) - e.clientY * 0.05}px)`;
-});
+}); 
 
-var chapters = document.querySelectorAll(".chapter");
+var hovers = document.querySelectorAll(".hover");
+
+for (let i = 0; i < 4; i++) {
+  var hover = hovers[i];
+
+  hover.addEventListener("mouseover", function (event) {
+    var chapter = document.querySelector(`.chapter--${event.path[0].dataset.chapter}`);
+    chapter.querySelectorAll(".element").forEach((element, index) => {
+      element.classList.add(`hovered--${index + 1}`);
+    });
+  });
+
+  hover.addEventListener("mouseout", function (event) {
+    var chapter = document.querySelector(`.chapter--${event.path[0].dataset.chapter}`);
+    chapter.querySelectorAll(".element").forEach((element, index) => {
+      element.classList.remove(`hovered--${index + 1}`);
+    });
+  });
+
+  hover.addEventListener("click", function (target) {
+    var numChapter = target.path[0].dataset.chapter - 1;
+    container.classList.replace(
+      `position--0`,
+      `position--${positions[numChapter][0]}`
+    );
+    setTimeout(() => {
+      addEventListener(positions[numChapter]);
+    }, 2000);
+  });
+}
+
+/* var chapters = document.querySelectorAll(".chapter");
 
 for (let i = 0; i < 4; i++) {
   var chapter = chapters[i];
@@ -186,4 +217,4 @@ for (let i = 0; i < 4; i++) {
       addEventListener(positions[numChapter]);
     }, 2000);
   });
-}
+} */

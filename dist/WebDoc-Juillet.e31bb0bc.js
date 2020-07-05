@@ -269,28 +269,58 @@ document.addEventListener("mousemove", function (e) {
   container.style.top = "".concat(vh(5) - e.clientY * 0.1, "px");
   document.querySelector(".title__view--home").style.transform = "translate(".concat(vh(5) - e.clientX * 0.05, "px, ").concat(vh(5) - e.clientY * 0.05, "px)");
 });
-var chapters = document.querySelectorAll(".chapter");
+var hovers = document.querySelectorAll(".hover");
 
 for (var i = 0; i < 4; i++) {
-  var chapter = chapters[i];
-  chapter.addEventListener("mouseover", function (event) {
-    event.path[1].querySelectorAll(".element").forEach(function (element, index) {
+  var hover = hovers[i];
+  hover.addEventListener("mouseover", function (event) {
+    var chapter = document.querySelector(".chapter--".concat(event.path[0].dataset.chapter));
+    chapter.querySelectorAll(".element").forEach(function (element, index) {
       element.classList.add("hovered--".concat(index + 1));
     });
   });
-  chapter.addEventListener("mouseout", function (event) {
-    event.path[1].querySelectorAll(".element").forEach(function (element, index) {
+  hover.addEventListener("mouseout", function (event) {
+    var chapter = document.querySelector(".chapter--".concat(event.path[0].dataset.chapter));
+    chapter.querySelectorAll(".element").forEach(function (element, index) {
       element.classList.remove("hovered--".concat(index + 1));
     });
   });
-  chapter.addEventListener("click", function (target) {
-    var numChapter = target.path[1].dataset.chapter - 1;
+  hover.addEventListener("click", function (target) {
+    var numChapter = target.path[0].dataset.chapter - 1;
     container.classList.replace("position--0", "position--".concat(positions[numChapter][0]));
     setTimeout(function () {
       addEventListener(positions[numChapter]);
     }, 2000);
   });
 }
+/* var chapters = document.querySelectorAll(".chapter");
+
+for (let i = 0; i < 4; i++) {
+  var chapter = chapters[i];
+
+  chapter.addEventListener("mouseover", function (event) {
+    event.path[1].querySelectorAll(".element").forEach((element, index) => {
+      element.classList.add(`hovered--${index + 1}`);
+    });
+  });
+
+  chapter.addEventListener("mouseout", function (event) {
+    event.path[1].querySelectorAll(".element").forEach((element, index) => {
+      element.classList.remove(`hovered--${index + 1}`);
+    });
+  });
+
+  chapter.addEventListener("click", function (target) {
+    var numChapter = target.path[1].dataset.chapter - 1;
+    container.classList.replace(
+      `position--0`,
+      `position--${positions[numChapter][0]}`
+    );
+    setTimeout(() => {
+      addEventListener(positions[numChapter]);
+    }, 2000);
+  });
+} */
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -319,7 +349,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57228" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52773" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
