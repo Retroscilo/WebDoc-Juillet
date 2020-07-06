@@ -157,3 +157,30 @@
     stroke-dashoffset: 0;
   }
 }
+
+.hover {
+  position: absolute;
+  width: 20%;
+  height: 27%;
+  z-index: 50;
+}
+
+.hover--1 {
+  top: 16%;
+  left: 9%;
+}
+
+.hover--2 {
+  top: 9%;
+  right: 13%;
+}
+
+.hover--3 {
+  bottom: 9%;
+  right: 19%;
+}
+
+.hover--4 {
+  bottom: 9%;
+  left: 14%;
+}

@@ -252,6 +252,33 @@ body {
     stroke-dashoffset: 0;
   }
 }
+.hover {
+  position: absolute;
+  width: 20%;
+  height: 27%;
+  z-index: 50;
+}
+
+.hover--1 {
+  top: 16%;
+  left: 9%;
+}
+
+.hover--2 {
+  top: 9%;
+  right: 13%;
+}
+
+.hover--3 {
+  bottom: 9%;
+  right: 19%;
+}
+
+.hover--4 {
+  bottom: 9%;
+  left: 14%;
+}
+
 /** Positioning classes **/
 .view--home {
   left: 445vw;
@@ -397,11 +424,11 @@ body {
 .container__chapter--1 .title__view--1 {
   position: relative;
   top: 200px;
-  left: 180px;
+  left: 20px;
 }
 .container__chapter--1 .title__view--1:first-child {
   top: 30px;
-  left: -600px;
+  left: -270px;
 }
 .container__chapter--1 .title__view--3 {
   top: 75px;
@@ -416,7 +443,7 @@ body {
   background: no-repeat url("/icionnoie.879a6e41.png");
   background-size: cover;
   background-position: center;
-  width: 900px;
+  width: 700px;
   height: 400px;
   top: 12%;
   left: -2%;
@@ -426,22 +453,63 @@ body {
     width: 600px;
   }
 }
+.container__chapter--1 .view--1 .view--1__element--1::before {
+  content: "";
+  background: center no-repeat url("/Vector.c2997a1b.png");
+  background-size: contain;
+  width: 180px;
+  height: 50px;
+  position: absolute;
+  left: 45%;
+  top: -6%;
+}
 .container__chapter--1 .view--1 .view--1__element--2 {
-  right: 20%;
+  right: 24%;
   top: 380px;
 }
 @media (max-width: 1600px) {
   .container__chapter--1 .view--1 .view--1__element--2 {
     right: 35%;
     width: 500px;
+    font-size: 25px;
   }
+}
+.container__chapter--1 .view--1 .view--1__element--2::after {
+  content: "";
+  background: center no-repeat url("/Vector.c2997a1b.png");
+  background-size: contain;
+  width: 120px;
+  height: 30px;
+  position: absolute;
+  left: 30%;
+  bottom: -12%;
+  transform: rotate(5deg);
 }
 .container__chapter--1 .view--1 .view--1__element--3 {
   width: 400px;
-  height: 350px;
   left: 100px;
-  top: 490px;
+  top: 570px;
   padding: 20px 30px;
+  font-size: 25px;
+  height: 220px;
+}
+@media (max-width: 1600px) {
+  .container__chapter--1 .view--1 .view--1__element--3 {
+    font-size: 25px;
+    height: 220px;
+    top: 560px;
+    left: 20px;
+  }
+}
+.container__chapter--1 .view--1 .view--1__element--3::before {
+  content: "";
+  background: center no-repeat url("/Vector.c2997a1b.png");
+  background-size: contain;
+  width: 120px;
+  height: 30px;
+  position: absolute;
+  left: 30%;
+  top: -4%;
 }
 
 .container__chapter--1 .view--2 .view--2__element--1 {
@@ -659,30 +727,9 @@ body {
   top: 25%;
 }
 
-.hover {
+.redline {
   position: absolute;
-  width: 20%;
-  height: 27%;
-}
-
-.hover--1 {
-  top: 16%;
-  left: 9%;
-}
-
-.hover--2 {
-  top: 9%;
-  right: 13%;
-}
-
-.hover--3 {
-  bottom: 9%;
-  right: 19%;
-}
-
-.hover--4 {
-  bottom: 9%;
-  left: 14%;
+  top: 0;
 }
 
 /*# sourceMappingURL=/styles.c86c3119.css.map */

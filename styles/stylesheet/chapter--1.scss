@@ -6,11 +6,11 @@
   .title__view--1 {
     position: relative;
     top: 200px;
-    left: 180px;
+    left: 20px;
   
     &:first-child {
       top: 30px;
-      left: -600px;
+      left: -270px;
     }
   }
   
@@ -31,7 +31,7 @@
     background: no-repeat url("/assets/img/chapitre--1/view--1/icionnoie.png");
     background-size: cover;
     background-position: center;
-    width: 900px;
+    width: 700px;
     height: 400px;
     top: 12%;
     left: -2%;
@@ -41,23 +41,67 @@
     }
   }
 
+  .view--1__element--1::before {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 180px;
+    height: 50px;
+    position: absolute;
+    left: 45%;
+    top: -6%;
+  }
+
   .view--1__element--2 {
-    right: 20%;
+    right: 24%;
     top: 380px;
 
     @include smaller-screen {
       right: 35%;
       width: 500px;
+      font-size: 25px;
     }
+  }
+
+  .view--1__element--2::after {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    left: 30%;
+    bottom: -12%;
+    transform: rotate(5deg);
   }
 
   .view--1__element--3 {
     width: 400px;
-    height: 350px;
     left: 100px;
-    top: 490px;
+    top: 570px;
     padding: 20px 30px;
+    font-size: 25px;
+    height: 220px;
+
+    @include smaller-screen {
+      font-size: 25px;
+      height: 220px;
+      top: 560px;
+      left: 20px;
+    }
   }
+
+  .view--1__element--3::before {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    left: 30%;
+    top: -4%;
+  }
+
 }
 
 .container__chapter--1 .view--2 {
@@ -76,6 +120,8 @@
     height: 500px;
     background: no-repeat url("/assets/img/chapitre--1/view--2/algeriens17octobre.png");
   }
+
+
 
   .view--2__element--3 {
     bottom: 150px;
