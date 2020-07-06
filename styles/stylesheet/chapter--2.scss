@@ -2,6 +2,7 @@
 @import "mixins.scss";
 
 .container__chapter--2 {
+
   .view--1__element--2 {
     background: center no-repeat url("/assets/img/chapitre--2/view--1/zyedetbouna.png");
     width: 1000px;
@@ -9,6 +10,30 @@
     background-size: contain;
     left: 16%;
     top: 12%;
+  }
+
+  .view--1__element--2::before {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 160px;
+    height: 50px;
+    position: absolute;
+    left: -7%;
+    top: 35%;
+    transform: rotate(90deg);
+  }
+
+  .view--1__element--2::after {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 160px;
+    height: 50px;
+    position: absolute;
+    right: -7%;
+    top: 55%;
+    transform: rotate(90deg);
   }
 
   .view--1__element--1 {
@@ -37,11 +62,59 @@
     top: 22%;
   }
 
+  .view--3__element--1::before {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 160px;
+    height: 50px;
+    position: absolute;
+    left: -7%;
+    top: 5%;
+    transform: rotate(-40deg);
+  }
+
+  .view--3__element--1::after {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 160px;
+    height: 50px;
+    position: absolute;
+    right: 7%;
+    bottom: 5%;
+    transform: rotate(-1deg);
+  }
+
   .view--3__element--2 {
     width: 500px;
     padding: 30px;
     top: 34%;
     left: 50%;
+  }
+
+  .view--3__element--2::after {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 160px;
+    height: 50px;
+    position: absolute;
+    right: -13%;
+    top: 55%;
+    transform: rotate(90deg);
+  }
+
+  .view--3__element--2::before {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 160px;
+    height: 50px;
+    position: absolute;
+    left: -3%;
+    top: -15%;
+    transform: rotate(40deg);
   }
 
   .title__view--3 {
@@ -61,6 +134,31 @@
     left: 50%;
     transform: translate(-50%);
   }
+
+.view--5__element--1::before {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    left: 30%;
+    top: -10%;
+    transform: rotate(0deg);
+}
+
+.view--5__element--1::after {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    left: 60%;
+    bottom: -10%;
+    transform: rotate(0deg);
+}
+
   .view--5__element--2 {
     top: 40%;
     left: 50%;

@@ -101,7 +101,6 @@
     left: 30%;
     top: -4%;
   }
-
 }
 
 .container__chapter--1 .view--2 {
@@ -113,6 +112,42 @@
     padding: 20px 80px 20px 30px;
   }
 
+  .view--2__element--1::before {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    left: 30%;
+    top: -4%;
+    transform: rotate(-5deg);
+  }
+
+  .view--2__element--1::after {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    left: -5%;
+    bottom: -4%;
+    transform: rotate(10deg);
+  }
+
+  .view--2__element--2::before {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 160px;
+    height: 50px;
+    position: absolute;
+    left: 15%;
+    top: -18%;
+    transform: rotate(5deg);
+  }
+
   .view--2__element--2 {
     top: 95px;
     left: 740px;
@@ -120,8 +155,6 @@
     height: 500px;
     background: no-repeat url("/assets/img/chapitre--1/view--2/algeriens17octobre.png");
   }
-
-
 
   .view--2__element--3 {
     bottom: 150px;
@@ -140,11 +173,35 @@
   
   .view--3__element--2 {
     background: no-repeat url("/assets/img/chapitre--1/view--3/mauricepaponjuges.png");
-    background-size: cover;
+    background-size: contain;
     width: 600px;
     height: 350px;
     left: 75px;
     top: 40px;
+  }
+
+  .view--3__element--2::after {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    left: -10%;
+    top: 25%;
+    transform: rotate(90deg);
+  }
+
+  .view--3__element--2::before {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    right: -10%;
+    top: 45%;
+    transform: rotate(90deg);
   }
 
   .view--3__element--3 {
