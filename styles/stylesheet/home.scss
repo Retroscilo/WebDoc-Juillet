@@ -22,33 +22,39 @@
   .view--home__element--1 {
     background: no-repeat url("/assets/img/home/malik2.png");
     background-size: contain;
-    top: 19%;
-    left: 10%;
+    top: 15%;
+    left: 11%;
     width: 400px;
     height: 250px;
-
-    @include smaller-screen {
-      width: 300px;
+    @include tiny-screen {
+      width: 250px;
     }
   }
 
   .view--home__element--2 {
     background: no-repeat url("/assets/img/home/malikoussekine.png");
-    width: 300px;
+    width: 400px;
     background-position: center;
     height: 300px;
     top: 15%;
     left: 8%;
-
-    @include smaller-screen {
-      width: 300px;
+    @include tiny-screen {
+      width: 220px;
+      height: 200px;
     }
+
   }
 
   .view--home__element--3 {
     top: 25%;
     left: 7%;
     transform: rotate(-8deg) scale(0.8);
+    @include tiny-screen {
+      transform: rotate(-8deg) scale(0.8);
+      width: 250px;
+      height: 90px;
+      font-size: 1.5em;
+    }
   }
 
   .view--home__element--4 {
@@ -58,6 +64,10 @@
     right: 12%;
     width: 300px;
     height: 250px;
+    @include tiny-screen {
+      width: 250px;
+    }
+
   }
 
   .view--home__element--5 {
@@ -68,12 +78,22 @@
     height: 220px;
     top: 8%;
     right: 14%;
+    @include tiny-screen {
+      width: 250px;
+    }
   }
 
   .view--home__element--6 {
     top: 15%;
     right: 12%;
     transform: rotate(3deg) scale(0.9);
+    @include tiny-screen {
+      transform: rotate(-8deg) scale(0.8);
+      width: 250px;
+      height: 90px;
+      font-size: 1.5em;
+      top: 18%;
+    }
   }
 
   .view--home__element--7 {
@@ -82,6 +102,11 @@
     right: 16%;
     width: 300px;
     height: 250px;
+    @include tiny-screen {
+      width: 250px;
+      height: 150px;
+    }
+
   }
 
   .view--home__element--8 {
@@ -92,12 +117,25 @@
     height: 300px;
     bottom: 10%;
     right: 21%;
+    @include tiny-screen {
+      width: 280px;
+      height: 250px;
+    }
+
   }
 
   .view--home__element--9 {
     bottom: 15%;
     right: 18%;
     transform: rotate(4deg) scale(0.8);
+    @include tiny-screen {
+      transform: rotate(-8deg) scale(0.8);
+      width: 250px;
+      height: 90px;
+      font-size: 1.5em;
+      right: 21%;
+    }
+    
   }
 
   .view--home__element--10 {
@@ -106,6 +144,10 @@
     left: 18%;
     width: 300px;
     height: 250px;
+    @include tiny-screen {
+      width: 250px;
+      height: 150px;
+    }
   }
 
   .view--home__element--11 {
@@ -115,7 +157,11 @@
     height: 200px;
     bottom: 12%;
     left: 12%;
-    transform: rotate(-4deg)
+    transform: rotate(-4deg);
+    @include tiny-screen {
+      width: 250px;
+      height: 150px;
+    }
   }
 
   .view--home__element--12 {
@@ -124,8 +170,12 @@
     width: 410px;
     transform: rotate(-2deg) scale(0.9);
 
-    @include smaller-screen {
-      transform: rotate(-2deg) scale(0.8);
+    @include tiny-screen {
+      transform: rotate(-3deg) scale(0.8);
+      width: 280px;
+      height: 90px;
+      font-size: 1.5em;
+      bottom: 16%;
     }
   }
 }

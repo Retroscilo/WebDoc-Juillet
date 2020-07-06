@@ -127,33 +127,42 @@ body {
 .view--home .view--home__element--1 {
   background: no-repeat url("/malik2.fc4ef5b2.png");
   background-size: contain;
-  top: 19%;
-  left: 10%;
+  top: 15%;
+  left: 11%;
   width: 400px;
   height: 250px;
 }
-@media (max-width: 1600px) {
+@media (max-height: 1500px) {
   .view--home .view--home__element--1 {
-    width: 300px;
+    width: 250px;
   }
 }
 .view--home .view--home__element--2 {
   background: no-repeat url("/malikoussekine.5539e0e9.png");
-  width: 300px;
+  width: 400px;
   background-position: center;
   height: 300px;
   top: 15%;
   left: 8%;
 }
-@media (max-width: 1600px) {
+@media (max-height: 1500px) {
   .view--home .view--home__element--2 {
-    width: 300px;
+    width: 220px;
+    height: 200px;
   }
 }
 .view--home .view--home__element--3 {
   top: 25%;
   left: 7%;
   transform: rotate(-8deg) scale(0.8);
+}
+@media (max-height: 1500px) {
+  .view--home .view--home__element--3 {
+    transform: rotate(-8deg) scale(0.8);
+    width: 250px;
+    height: 90px;
+    font-size: 1.5em;
+  }
 }
 .view--home .view--home__element--4 {
   background: no-repeat url("/zyed2.0cf4b028.png");
@@ -162,6 +171,11 @@ body {
   right: 12%;
   width: 300px;
   height: 250px;
+}
+@media (max-height: 1500px) {
+  .view--home .view--home__element--4 {
+    width: 250px;
+  }
 }
 .view--home .view--home__element--5 {
   background: no-repeat url("/bouna.e37c61af.png");
@@ -172,10 +186,24 @@ body {
   top: 8%;
   right: 14%;
 }
+@media (max-height: 1500px) {
+  .view--home .view--home__element--5 {
+    width: 250px;
+  }
+}
 .view--home .view--home__element--6 {
   top: 15%;
   right: 12%;
   transform: rotate(3deg) scale(0.9);
+}
+@media (max-height: 1500px) {
+  .view--home .view--home__element--6 {
+    transform: rotate(-8deg) scale(0.8);
+    width: 250px;
+    height: 90px;
+    font-size: 1.5em;
+    top: 18%;
+  }
 }
 .view--home .view--home__element--7 {
   background: center no-repeat url("/unSeulHeros.fc1e9eb8.png");
@@ -183,6 +211,12 @@ body {
   right: 16%;
   width: 300px;
   height: 250px;
+}
+@media (max-height: 1500px) {
+  .view--home .view--home__element--7 {
+    width: 250px;
+    height: 150px;
+  }
 }
 .view--home .view--home__element--8 {
   background: no-repeat url("/icionnoie.f077f6a0.png");
@@ -193,10 +227,25 @@ body {
   bottom: 10%;
   right: 21%;
 }
+@media (max-height: 1500px) {
+  .view--home .view--home__element--8 {
+    width: 280px;
+    height: 250px;
+  }
+}
 .view--home .view--home__element--9 {
   bottom: 15%;
   right: 18%;
   transform: rotate(4deg) scale(0.8);
+}
+@media (max-height: 1500px) {
+  .view--home .view--home__element--9 {
+    transform: rotate(-8deg) scale(0.8);
+    width: 250px;
+    height: 90px;
+    font-size: 1.5em;
+    right: 21%;
+  }
 }
 .view--home .view--home__element--10 {
   background: no-repeat url("/Police.2b604512.png");
@@ -204,6 +253,12 @@ body {
   left: 18%;
   width: 300px;
   height: 250px;
+}
+@media (max-height: 1500px) {
+  .view--home .view--home__element--10 {
+    width: 250px;
+    height: 150px;
+  }
 }
 .view--home .view--home__element--11 {
   background: no-repeat url("/police2.31de93e0.png");
@@ -214,15 +269,25 @@ body {
   left: 12%;
   transform: rotate(-4deg);
 }
+@media (max-height: 1500px) {
+  .view--home .view--home__element--11 {
+    width: 250px;
+    height: 150px;
+  }
+}
 .view--home .view--home__element--12 {
   bottom: 14%;
   left: 14%;
   width: 410px;
   transform: rotate(-2deg) scale(0.9);
 }
-@media (max-width: 1600px) {
+@media (max-height: 1500px) {
   .view--home .view--home__element--12 {
-    transform: rotate(-2deg) scale(0.8);
+    transform: rotate(-3deg) scale(0.8);
+    width: 280px;
+    height: 90px;
+    font-size: 1.5em;
+    bottom: 16%;
   }
 }
 
