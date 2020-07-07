@@ -1,5 +1,5 @@
 @mixin tiny-screen {
-  @media (max-height: 1500px) { @content; }
+  @media (max-width: 1500px) { @content; }
 }
 
 @mixin smaller-screen {
