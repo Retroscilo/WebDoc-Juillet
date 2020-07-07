@@ -96,12 +96,13 @@ body {
   font-family: "Pragati Narrow", sans-serif;
   font-size: 30px;
   line-height: 130%;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .title {
   position: relative;
   font-family: "Lacquer", cursive;
-  font-size: 75px;
+  font-size: 55px;
   color: #f33a3a;
   text-align: center;
 }
@@ -114,8 +115,12 @@ body {
   position: absolute;
 }
 
+.shadow {
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.3);
+}
+
 .title.title__view--home {
-  font-size: 105px;
+  font-size: 55px;
   font-family: "Staatliches", cursive;
   display: flex;
   justify-content: center;
@@ -257,10 +262,9 @@ body {
 }
 .view--home .view--home__element--10 {
   background: no-repeat url("/Police.2b604512.png");
+  background-size: contain;
   bottom: 10%;
   left: 18%;
-  width: 300px;
-  height: 250px;
 }
 @media (max-height: 1500px) {
   .view--home .view--home__element--10 {
@@ -494,14 +498,15 @@ body {
   transform: translate(-270vw, -480vh);
 }
 
-.container__chapter--1 .title__view--1 {
-  position: relative;
-  top: 200px;
-  left: 20px;
+.container__chapter--1 .title__view--1:first-of-type {
+  position: absolute;
+  top: 10px;
+  left: 420px;
 }
-.container__chapter--1 .title__view--1:first-child {
-  top: 30px;
-  left: -270px;
+.container__chapter--1 .title__view--1 {
+  position: absolute;
+  top: 270px;
+  left: 750px;
 }
 .container__chapter--1 .title__view--3 {
   top: 75px;
@@ -512,6 +517,9 @@ body {
   }
 }
 
+.container__chapter--1 .view--1 {
+  position: relative;
+}
 .container__chapter--1 .view--1 .view--1__element--1 {
   background: no-repeat url("/icionnoie.879a6e41.png");
   background-size: cover;
@@ -613,23 +621,23 @@ body {
   bottom: -4%;
   transform: rotate(10deg);
 }
-.container__chapter--1 .view--2 .view--2__element--2::before {
-  content: "";
-  background: center no-repeat url("/Vector.c2997a1b.png");
-  background-size: contain;
-  width: 160px;
-  height: 50px;
-  position: absolute;
-  left: 15%;
-  top: -18%;
-  transform: rotate(5deg);
-}
 .container__chapter--1 .view--2 .view--2__element--2 {
   top: 95px;
   left: 740px;
   width: 500px;
   height: 500px;
   background: no-repeat url("/algeriens17octobre.ac4752e7.png");
+}
+.container__chapter--1 .view--2 .view--2__element--2::after {
+  content: "";
+  background: center no-repeat url("/Ellipse--red.cfeba2e4.png");
+  background-size: contain;
+  width: 120px;
+  height: 30px;
+  position: absolute;
+  right: 10%;
+  top: 5%;
+  transform: rotate(90deg);
 }
 .container__chapter--1 .view--2 .view--2__element--3 {
   bottom: 150px;
@@ -642,9 +650,20 @@ body {
   width: 550px;
   padding: 50px 30px 20px 30px;
 }
+.container__chapter--1 .view--3 .view--3__element--1::before {
+  content: "";
+  background: center no-repeat url("/Vector.c2997a1b.png");
+  background-size: contain;
+  width: 160px;
+  height: 50px;
+  position: absolute;
+  left: -12%;
+  top: 25%;
+  transform: rotate(90deg);
+}
 .container__chapter--1 .view--3 .view--3__element--2 {
   background: no-repeat url("/mauricepaponjuges.8cbe5131.png");
-  background-size: contain;
+  background-size: cover;
   width: 600px;
   height: 350px;
   left: 75px;

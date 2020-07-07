@@ -2,7 +2,7 @@
 @import "mixins.scss";
 
 .title.title__view--home {
-  font-size: 105px;
+  font-size: 55px;
   font-family: "Staatliches", cursive;
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@
 }
 
 .view--home {
-  background: no-repeat url('/assets/img/Leviathan.png');
+  background: no-repeat url("/assets/img/Leviathan.png");
   background-size: contain;
   background-position: center;
   z-index: -2;
@@ -42,7 +42,6 @@
       width: 220px;
       height: 200px;
     }
-
   }
 
   .view--home__element--3 {
@@ -67,7 +66,6 @@
     @include tiny-screen {
       width: 250px;
     }
-
   }
 
   .view--home__element--5 {
@@ -106,7 +104,6 @@
       width: 250px;
       height: 150px;
     }
-
   }
 
   .view--home__element--8 {
@@ -121,7 +118,6 @@
       width: 280px;
       height: 250px;
     }
-
   }
 
   .view--home__element--9 {
@@ -135,15 +131,14 @@
       font-size: 1.5em;
       right: 21%;
     }
-    
   }
 
   .view--home__element--10 {
     background: no-repeat url("/assets/img/home/Police.png");
+    background-size: contain;
     bottom: 10%;
     left: 18%;
-    width: 300px;
-    height: 250px;
+
     @include tiny-screen {
       width: 250px;
       height: 150px;
@@ -153,6 +148,7 @@
   .view--home__element--11 {
     background: no-repeat url("/assets/img/home/police2.png");
     width: 300px;
+    
     background-position: center;
     height: 200px;
     bottom: 12%;
@@ -193,9 +189,9 @@
 .hovered--3 {
   transform: rotate(-2deg) scale(0.9) translate(40px, 100px) !important;
 
-    @include smaller-screen {
-      transform: rotate(-2deg) scale(0.8) translate(40px, 100px) !important;
-    }
+  @include smaller-screen {
+    transform: rotate(-2deg) scale(0.8) translate(40px, 100px) !important;
+  }
 }
 
 .hover:hover {
