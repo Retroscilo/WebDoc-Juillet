@@ -15,11 +15,45 @@
     background: center no-repeat url("/assets/img/chapitre--4/view--2/manifContreLoiDevaquet.png");
   }
 
+  .view--2__element--1::before {
+    content: "";
+    background: center no-repeat url("/assets/img/Ellipse--green.png");
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 7%;
+    top: 5%;
+    transform: rotate(90deg);
+  }
+
   .view--2__element--2 {
     width: 600px;
     padding: 40px 40px 40px 80px;
     top: 28%;
     left: 810px;
+  }
+
+  .view--2__element--2::before {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 160px;
+    height: 60px;
+    position: absolute;
+    right: 43%;
+    top: -8%;
+  }
+
+  .view--2__element--2::after {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 160px;
+    height: 60px;
+    position: absolute;
+    left: 43%;
+    bottom: -8%;
   }
 
   .view--3__element--1 {
@@ -37,12 +71,59 @@
     transform: translate(-50%);
   }
 
+  .view--3__element--2::before {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 160px;
+    height: 60px;
+    position: absolute;
+    left: 43%;
+    bottom: -10%;
+  }
+
+  .view--3__element--2::after {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 160px;
+    height: 60px;
+    position: absolute;
+    right: 23%;
+    top: -10%;
+    transform: rotate(5deg);
+  }
+
   .view--4__element--1 {
     width: 600px;
     left: 50%;
     top: 40%;
     transform: translate(-50%);
     padding: 90px;
+  }
+
+  .view--4__element--1::before {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 160px;
+    height: 60px;
+    position: absolute;
+    right: 23%;
+    top: -10%;
+    transform: rotate(5deg);
+  }
+
+  .view--4__element--1::after {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 160px;
+    height: 60px;
+    position: absolute;
+    left: 23%;
+    bottom: -8%;
+    transform: rotate(-2deg);
   }
 
   .view--4__element--2 {

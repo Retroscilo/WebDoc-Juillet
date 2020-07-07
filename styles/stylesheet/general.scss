@@ -23,7 +23,7 @@ body {
     transition: transform 0.5s ease-in-out;
   }
 
-  .paper { 
+  .paper {
     // Chapter selection styling
     background: no-repeat url("/assets/img/home/Paper.png");
     background-size: cover;
@@ -53,4 +53,12 @@ body {
   font-size: 75px;
   color: $base-color-title;
   text-align: center;
+}
+
+.scotch {
+  background: no-repeat center url("/assets/img/Vector.png");
+  background-size: contain;
+  width: 150px;
+  height: 50px;
+  position: absolute;
 }

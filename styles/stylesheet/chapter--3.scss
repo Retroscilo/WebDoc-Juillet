@@ -110,6 +110,29 @@
     padding: 40px;
   }
 
+  .view--3__element--1::after {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 160px;
+    height: 60px;
+    position: absolute;
+    left: 19%;
+    top: -5%;
+    transform: rotate(-10deg);
+  }
+
+  .view--3__element--1::before {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 160px;
+    height: 60px;
+    position: absolute;
+    left: 49%;
+    bottom: -5%;
+  }
+
   .view--3__element--2::after {
     content: "";
     background: center no-repeat url("/assets/img/Vector.png");
@@ -118,7 +141,7 @@
     height: 60px;
     position: absolute;
     left: 19%;
-    top: -25%;
+    top: -5%;
     transform: rotate(10deg);
   }
 
@@ -135,6 +158,18 @@
     transform: translate(-50%);
   }
 
+  .view--4__element--1::before {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 160px;
+    height: 60px;
+    position: absolute;
+    left: 19%;
+    top: -16%;
+    transform: rotate(10deg);
+  }
+
   .view--4__element--2 {
     top: 30%;
     left: 50%;
@@ -146,5 +181,29 @@
     left: 50%;
     padding: 40Px;
     transform: translate(-50%);
+  }
+
+  .view--4__element--3::before {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 160px;
+    height: 60px;
+    position: absolute;
+    left: -6%;
+    top: -5%;
+    transform: rotate(-50deg);
+  }
+
+  .view--4__element--3::after {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 160px;
+    height: 60px;
+    position: absolute;
+    right: -7%;
+    top: 55%;
+    transform: rotate(90deg);
   }
 }
