@@ -3,15 +3,16 @@
 
 .container__chapter--1 {
 
+  .title__view--1:first-of-type {
+    position: absolute;
+    top: 10px;
+    left: 420px;
+  }
+
   .title__view--1 {
-    position: relative;
-    top: 200px;
-    left: 20px;
-  
-    &:first-child {
-      top: 30px;
-      left: -270px;
-    }
+    position: absolute;
+    top: 270px;
+    left: 750px;
   }
   
   .title__view--3 {
@@ -26,7 +27,7 @@
 
 
 .container__chapter--1 .view--1 {
-
+  position: relative;
   .view--1__element--1 {
     background: no-repeat url("/assets/img/chapitre--1/view--1/icionnoie.png");
     background-size: cover;
@@ -101,7 +102,6 @@
     left: 30%;
     top: -4%;
   }
-
 }
 
 .container__chapter--1 .view--2 {
@@ -113,6 +113,30 @@
     padding: 20px 80px 20px 30px;
   }
 
+  .view--2__element--1::before {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    left: 30%;
+    top: -4%;
+    transform: rotate(-5deg);
+  }
+
+  .view--2__element--1::after {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    left: -5%;
+    bottom: -4%;
+    transform: rotate(10deg);
+  }
+
   .view--2__element--2 {
     top: 95px;
     left: 740px;
@@ -121,7 +145,17 @@
     background: no-repeat url("/assets/img/chapitre--1/view--2/algeriens17octobre.png");
   }
 
-
+  .view--2__element--2::after {
+    content: "";
+    background: center no-repeat url("/assets/img/Ellipse--red.png");
+    background-size: contain;
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    right: 10%;
+    top: 5%;
+    transform: rotate(90deg);
+  }
 
   .view--2__element--3 {
     bottom: 150px;
@@ -137,6 +171,18 @@
     width: 550px;
     padding: 50px 30px 20px 30px;
   }
+
+  .view--3__element--1::before {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 160px;
+    height: 50px;
+    position: absolute;
+    left: -12%;
+    top: 25%;
+    transform: rotate(90deg);
+  }
   
   .view--3__element--2 {
     background: no-repeat url("/assets/img/chapitre--1/view--3/mauricepaponjuges.png");
@@ -145,6 +191,30 @@
     height: 350px;
     left: 75px;
     top: 40px;
+  }
+
+  .view--3__element--2::after {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    left: -10%;
+    top: 25%;
+    transform: rotate(90deg);
+  }
+
+  .view--3__element--2::before {
+    content: "";
+    background: center no-repeat url("/assets/img/Vector.png");
+    background-size: contain;
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    right: -10%;
+    top: 45%;
+    transform: rotate(90deg);
   }
 
   .view--3__element--3 {

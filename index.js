@@ -189,32 +189,3 @@ for (let i = 0; i < 4; i++) {
     }, 2000);
   });
 }
-
-/* var chapters = document.querySelectorAll(".chapter");
-
-for (let i = 0; i < 4; i++) {
-  var chapter = chapters[i];
-
-  chapter.addEventListener("mouseover", function (event) {
-    event.path[1].querySelectorAll(".element").forEach((element, index) => {
-      element.classList.add(`hovered--${index + 1}`);
-    });
-  });
-
-  chapter.addEventListener("mouseout", function (event) {
-    event.path[1].querySelectorAll(".element").forEach((element, index) => {
-      element.classList.remove(`hovered--${index + 1}`);
-    });
-  });
-
-  chapter.addEventListener("click", function (target) {
-    var numChapter = target.path[1].dataset.chapter - 1;
-    container.classList.replace(
-      `position--0`,
-      `position--${positions[numChapter][0]}`
-    );
-    setTimeout(() => {
-      addEventListener(positions[numChapter]);
-    }, 2000);
-  });
-} */
