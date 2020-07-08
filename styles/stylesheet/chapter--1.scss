@@ -38,6 +38,9 @@
     left: -2%;
 
     @include smaller-screen {
+      width: 500px;
+    }
+    @include tiny-screen {
       width: 600px;
     }
   }
@@ -56,11 +59,14 @@
   .view--1__element--2 {
     right: 24%;
     top: 380px;
-
     @include smaller-screen {
       right: 35%;
       width: 500px;
       font-size: 25px;
+    }
+    @include tiny-screen {
+      width: 650px;
+      right: 25%;
     }
   }
 
@@ -90,6 +96,9 @@
       top: 560px;
       left: 20px;
     }
+    @include tiny-screen {
+
+    }
   }
 
   .view--1__element--3::before {
@@ -111,6 +120,9 @@
     left: 230px;
     width: 450px;
     padding: 20px 80px 20px 30px;
+    @include tiny-screen {
+      left: 80px;
+    }
   }
 
   .view--2__element--1::before {
@@ -143,6 +155,9 @@
     width: 500px;
     height: 500px;
     background: no-repeat url("/assets/img/chapitre--1/view--2/algeriens17octobre.png");
+    @include tiny-screen {
+      left: 850px;
+    }
   }
 
   .view--2__element--2::after {
@@ -160,6 +175,9 @@
   .view--2__element--3 {
     bottom: 150px;
     left: 680px;
+    @include tiny-screen {
+      left: 600px;
+    }
   }
 }
 
@@ -170,6 +188,9 @@
     left: 375px;
     width: 550px;
     padding: 50px 30px 20px 30px;
+    @include tiny-screen {
+      width: 750px;
+    }
   }
 
   .view--3__element--1::before {

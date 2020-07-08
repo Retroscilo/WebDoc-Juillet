@@ -10,6 +10,11 @@
     background-size: contain;
     left: 16%;
     top: 12%;
+    @include tiny-screen {
+      background-size: contain;
+      width: 800px;
+      height: 400px;
+    }
   }
 
   .view--1__element--2::before {
@@ -41,6 +46,10 @@
     padding: 60px 30px 30px 30px;
     left: 21%;
     top: 60%;
+    @include tiny-screen{
+      width: 600px;
+      height: 400px;
+    }
   }
 
   .title__view--1 {
