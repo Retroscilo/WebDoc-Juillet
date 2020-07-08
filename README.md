@@ -1,40 +1,29 @@
+
 # Webdoc - Premier Chapitre
 
 Premier chapitre du webdoc réalisé dans le cadre de la formation du **bachelor WEB d'Hétic**, deuxième année.
 
-
 # Installation
 
-    npm i 
-    npm run dev
+npm i
+
+npm run dev
 
 ## Dépendances
 
-Realisé avec Jquery, Bootstrap et Anime.js.
+Realisé en javascript natif
+
 Bundler : Parcel
 
 > Le back sera sous Symfony/Twig.
-> D'autres frameworks viendront se greffer à la liste d'ici la fin du projet
+
+> D'autres frameworks viendront peut-être se greffer à la liste d'ici la fin du projet
 
 ## A noter
-La structure va changer, le projet va rejoindre le repo du back d'ici peu et l'organisation définitive se fera à ce moment la.
-Pour le moment, le code est découpé en modules ES6 maison (cf. @roulement) et les modules en cours de programmation sont dans index.js
-
-### Modules terminés
-
-Roulement@1.0
-*Animation des différentes dates du webdoc*
-
-### En cours
-
-HorizontalScroll
-*Gestion de la navigation générale du webdoc*
-
-Sparkling
-*Animation de svg*
+Le projet présente une navigation bien particulière pour améliorer l'immersion de l'utilisateur, nous avons choisi pour cette raison de ne pas utiliser de framework:
+ - Le site est statique, il n'y a que peu d'interaction avec l'utilisateur, l'intérêt de react/vue etc est limité.
+ - Le parallax est fait en js natif, les performances sont mise à l'épreuves et ne pas utiliser de framework allège les processus de manière générale.
 
 ## Adresse du site
+
 https://app.netlify.com/sites/wizardly-bose-4383dc/overview
-
-
-

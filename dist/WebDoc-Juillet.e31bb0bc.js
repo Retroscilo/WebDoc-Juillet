@@ -194,42 +194,6 @@ disableScroll();
 /*********************** Start navigation ********************************** */
 
 /************************************************************************** */
-// Prière au bon seigneur des devs de ne jamais me forcer à revenir sur ce code, merci :)
-
-/*
-                          ______......------.
-  ______......------''''''                   -.
-  \                                            -.
-  |\                                             -.
-  | \                                              -.
-  |  \                                               -.
-  |   \                                                - __
-  |    \                         ______......------'''''' |
-  |   __\______......------''''''  o   ______......---.o  |
-  |   | .  o -=-- . |O|O| . O     '    ||o o o       ||   |
-  |   |o                               ||____......---|   |
-  |   |       ____.... ....---         ||''''|____||_.|   |
-  |   |       ....---- ----'''         ||'''''       ||  |'.
-  |   ||'.    ....---- ----'''         ||o o o       ||  '. |
-  |   |'. |   ....---- ----'''         ||____......---|   | |
-  |   | | |   ....---- ----'''         ||''''|____||_.|   | |
-  |   | | |   ....---- ----'''         ||'''''       ||   | |
-  |   | | |   ....---- ----'''         ||o o o       ||   | |
-  |   | | |   ....---- ----'''         ||____......---|   | |
-  |   | | |   ....---- ----'''         ||''''|____||_.|   | |
-  |   | | |                            ||'''''       ||  .'.'
-  |   | | |   ____....----''''|        ||o o o       ||  _|
-  |   |.'.'  |   ___....---   |        ||____......---| (_
-  |   |_     |____....----''''|        ||''''|____||_.|  _|
-  :    _)    |     __....-.   |        ||'''''       || (_
-   :  |_     |     |_....-'   |   GOD  ||o o o       ||   |
-    '  _)    |____....----''''|  BLESS ||____......---|  o|
-    '.|      | ___....----'': |   ME   ||''''|____||_.|   |
-     '|o     | |__....----''' |  /__\  :.'''''           _|
-      |  .   :____....----'''''  ______......------''''''
-      |   _____......------''''''
-       '''
-*/
 
 var container = document.querySelector(".view__container");
 var positions = [[13, 14, 15, 16], [4, 5, 6, 7, 8], [1, 2, 3], [9, 10, 11, 12]];
@@ -293,7 +257,21 @@ for (var i = 0; i < 4; i++) {
     }, 2000);
   });
 }
-},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+document.querySelectorAll('.menu').forEach(function (element) {
+  element.addEventListener('click', function () {
+    container.classList.remove(container.classList[1]);
+    container.classList.add('position--0');
+    index = 0;
+  });
+});
+document.querySelectorAll('.audioControl').addEventListener('click', function () {
+  document.querySelectorAll('.audioPlayer');
+});
+setTimeout(function () {
+  window.scrollTo(0, 0);
+}, 1000);
+},{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -321,7 +299,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55204" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65335" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -497,5 +475,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/WebDoc-Juillet.e31bb0bc.js.map

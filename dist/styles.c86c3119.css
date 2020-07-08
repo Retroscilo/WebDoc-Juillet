@@ -119,6 +119,49 @@ body {
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.3);
 }
 
+.menu {
+  font-family: "Lacquer", cursive;
+  font-size: 55px;
+  color: #f33a3a;
+  text-align: center;
+}
+
+.menu:hover {
+  cursor: pointer;
+}
+
+.audioControl {
+  background: no-repeat center url("/speaker.35c04a7d.png");
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 50px;
+  right: 200px;
+}
+
+.audioControl:hover {
+  cursor: pointer;
+}
+
+.sound {
+  width: 6px;
+  height: 60px;
+  background: black;
+  border-radius: 5%;
+  transform-origin: bottom left;
+  transform: rotate(45deg) translate(-10px, -12px) scaleY(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.noSound {
+  width: 6px;
+  height: 60px;
+  background: black;
+  border-radius: 5%;
+  transform: rotate(45deg) translate(10px, -20px) scaleY(1);
+}
+
 .title.title__view--home {
   font-size: 55px;
   font-family: "Staatliches", cursive;
@@ -726,6 +769,10 @@ body {
   left: 775px;
   top: 250px;
 }
+.container__chapter--1 .view--3 .view--3__element--4 {
+  top: 60%;
+  left: 60%;
+}
 
 .container__chapter--2 .view--1__element--2 {
   background: center no-repeat url("/zyedetbouna.159535b1.png");
@@ -893,6 +940,10 @@ body {
   left: 50%;
   transform: translate(-50%);
   top: 55%;
+}
+.container__chapter--2 .view--5__element--4 {
+  top: 80%;
+  left: 80%;
 }
 
 .container__chapter--3 .view--1__element--1 {
@@ -1107,6 +1158,10 @@ body {
   top: 55%;
   transform: rotate(90deg);
 }
+.container__chapter--3 .view--4__element--4 {
+  top: 80%;
+  left: 80%;
+}
 
 .container__chapter--4 .view--1__element--1 {
   left: 50%;
@@ -1238,6 +1293,10 @@ body {
   left: 50%;
   transform: translate(-50%);
   top: 25%;
+}
+.container__chapter--4 .view--4__element--3 {
+  top: 80%;
+  left: 80%;
 }
 
 .redline {
