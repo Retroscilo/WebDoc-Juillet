@@ -198,15 +198,19 @@ disableScroll();
 var container = document.querySelector(".view__container");
 var positions = [[13, 14, 15, 16], [4, 5, 6, 7, 8], [1, 2, 3], [9, 10, 11, 12]];
 var index = 0;
+var click = false;
+var numChapter;
 
-function addEventListener(array) {
+function addEventListener() {
   window.addEventListener("wheel", function (el) {
-    var prevPosition = array[index];
+    console.log(numChapter);
+    var prevPosition = positions[numChapter][index];
     var position;
 
-    if (el.deltaY > 0.1 && index < array.length - 1) {
+    if (el.deltaY > 0.1 && index < positions[numChapter].length - 1) {
+      console.log(numChapter);
       index++;
-      position = array[index];
+      position = positions[numChapter][index];
       container.classList.replace("position--".concat(prevPosition), "position--".concat(position));
     } else if (el.deltaY < -0.1) {
       if (index == 0) {
@@ -215,12 +219,12 @@ function addEventListener(array) {
       }
 
       index--;
-      position = array[index];
+      position = positions[numChapter][index];
       container.classList.replace("position--".concat(prevPosition), "position--".concat(position));
     }
 
     setTimeout(function () {
-      addEventListener(array);
+      addEventListener();
     }, 2000);
   }, {
     passive: true,
@@ -250,28 +254,36 @@ for (var i = 0; i < 4; i++) {
     });
   });
   hover.addEventListener("click", function (target) {
-    var numChapter = target.path[0].dataset.chapter - 1;
+    numChapter = target.path[0].dataset.chapter - 1;
     container.classList.replace("position--0", "position--".concat(positions[numChapter][0]));
-    setTimeout(function () {
-      addEventListener(positions[numChapter]);
-    }, 2000);
+
+    if (!click) {
+      setTimeout(function () {
+        addEventListener();
+      }, 2000);
+      click = true;
+    }
   });
 }
 
-document.querySelectorAll('.menu').forEach(function (element) {
-  element.addEventListener('click', function () {
+document.querySelectorAll(".menu").forEach(function (element) {
+  element.addEventListener("click", function () {
     container.classList.remove(container.classList[1]);
-    container.classList.add('position--0');
+    container.classList.add("position--0");
     index = 0;
   });
 });
-document.querySelectorAll('.audioControl').addEventListener('click', function () {
-  document.querySelectorAll('.audioPlayer');
-});
+/* document
+  .querySelectorAll(".audioControl")
+  .addEventListener("click", function () {
+    document.querySelector(".audioPlayer");
+  });
+*/
+
 setTimeout(function () {
   window.scrollTo(0, 0);
 }, 1000);
-},{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -299,7 +311,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65335" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60686" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -475,5 +487,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/WebDoc-Juillet.e31bb0bc.js.map
