@@ -85,11 +85,11 @@ function addEventListener() {
   window.addEventListener(
     "wheel",
     function (el) {
-      console.log(numChapter)
+      console.log(numChapter);
       var prevPosition = positions[numChapter][index];
       var position;
       if (el.deltaY > 0.1 && index < positions[numChapter].length - 1) {
-        console.log(numChapter)
+        console.log(numChapter);
         index++;
         position = positions[numChapter][index];
         container.classList.replace(
@@ -118,14 +118,15 @@ function addEventListener() {
     { passive: true, once: true }
   );
 }
-
-document.addEventListener("mousemove", function (e) {
-  container.style.left = `${vw(5) - e.clientX * 0.1}px`;
-  container.style.top = `${vh(5) - e.clientY * 0.1}px`;
-  document.querySelector(".title__view--home").style.transform = `translate(${
-    vh(5) - e.clientX * 0.05
-  }px, ${vh(5) - e.clientY * 0.05}px)`;
-});
+setTimeout(() => {
+  document.addEventListener("mousemove", function (e) {
+    container.style.left = `${vw(5) - e.clientX * 0.1}px`;
+    container.style.top = `${vh(5) - e.clientY * 0.1}px`;
+    document.querySelector(".title__view--home").style.transform = `translate(${
+      vh(5) - e.clientX * 0.05
+    }px, ${vh(5) - e.clientY * 0.05}px)`;
+  });
+}, 500);
 
 var hovers = document.querySelectorAll(".hover");
 
@@ -173,13 +174,19 @@ document.querySelectorAll(".menu").forEach((element) => {
   });
 });
 
-/* document
-  .querySelectorAll(".audioControl")
-  .addEventListener("click", function () {
-    document.querySelector(".audioPlayer");
-  });
-*/
+var player = document.querySelector(".audioPlayer");
+var control = document.querySelector(".audioControl");
+var deco = document.querySelector('.sound')
+
+player.volume = 0.1;
+
+control.addEventListener("click", function () {
+  if(player.paused) { player.play(); deco.classList.remove('noSound'); return; }
+    player.pause()
+    deco.classList.add('noSound')
+});
+
 
 setTimeout(() => {
   window.scrollTo(0, 0);
-}, 1000); 
+}, 1000);
