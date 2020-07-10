@@ -82,14 +82,14 @@ var click = false;
 var numChapter;
 
 function addEventListener() {
+  console.log("called");
   window.addEventListener(
     "wheel",
     function (el) {
-      console.log(numChapter);
+      console.log(index);
       var prevPosition = positions[numChapter][index];
       var position;
       if (el.deltaY > 0.1 && index < positions[numChapter].length - 1) {
-        console.log(numChapter);
         index++;
         position = positions[numChapter][index];
         container.classList.replace(
@@ -102,14 +102,15 @@ function addEventListener() {
             `position--${prevPosition}`,
             `position--0`
           );
-          return;
+          index = 0;
+        } else {
+          index--;
+          position = positions[numChapter][index];
+          container.classList.replace(
+            `position--${prevPosition}`,
+            `position--${position}`
+          );
         }
-        index--;
-        position = positions[numChapter][index];
-        container.classList.replace(
-          `position--${prevPosition}`,
-          `position--${position}`
-        );
       }
       setTimeout(() => {
         addEventListener();
@@ -118,6 +119,7 @@ function addEventListener() {
     { passive: true, once: true }
   );
 }
+
 setTimeout(() => {
   document.addEventListener("mousemove", function (e) {
     container.style.left = `${vw(5) - e.clientX * 0.1}px`;
@@ -126,7 +128,7 @@ setTimeout(() => {
       vh(5) - e.clientX * 0.05
     }px, ${vh(5) - e.clientY * 0.05}px)`;
   });
-}, 500);
+}, 2500);
 
 var hovers = document.querySelectorAll(".hover");
 
@@ -176,16 +178,19 @@ document.querySelectorAll(".menu").forEach((element) => {
 
 var player = document.querySelector(".audioPlayer");
 var control = document.querySelector(".audioControl");
-var deco = document.querySelector('.sound')
+var deco = document.querySelector(".sound");
 
 player.volume = 0.1;
 
 control.addEventListener("click", function () {
-  if(player.paused) { player.play(); deco.classList.remove('noSound'); return; }
-    player.pause()
-    deco.classList.add('noSound')
+  if (player.paused) {
+    player.play();
+    deco.classList.remove("noSound");
+    return;
+  }
+  player.pause();
+  deco.classList.add("noSound");
 });
-
 
 setTimeout(() => {
   window.scrollTo(0, 0);

@@ -202,25 +202,25 @@ var click = false;
 var numChapter;
 
 function addEventListener() {
+  console.log("called");
   window.addEventListener("wheel", function (el) {
-    console.log(numChapter);
+    console.log(index);
     var prevPosition = positions[numChapter][index];
     var position;
 
     if (el.deltaY > 0.1 && index < positions[numChapter].length - 1) {
-      console.log(numChapter);
       index++;
       position = positions[numChapter][index];
       container.classList.replace("position--".concat(prevPosition), "position--".concat(position));
     } else if (el.deltaY < -0.1) {
       if (index == 0) {
         container.classList.replace("position--".concat(prevPosition), "position--0");
-        return;
+        index = 0;
+      } else {
+        index--;
+        position = positions[numChapter][index];
+        container.classList.replace("position--".concat(prevPosition), "position--".concat(position));
       }
-
-      index--;
-      position = positions[numChapter][index];
-      container.classList.replace("position--".concat(prevPosition), "position--".concat(position));
     }
 
     setTimeout(function () {
@@ -238,7 +238,7 @@ setTimeout(function () {
     container.style.top = "".concat(vh(5) - e.clientY * 0.1, "px");
     document.querySelector(".title__view--home").style.transform = "translate(".concat(vh(5) - e.clientX * 0.05, "px, ").concat(vh(5) - e.clientY * 0.05, "px)");
   });
-}, 500);
+}, 2500);
 var hovers = document.querySelectorAll(".hover");
 
 for (var i = 0; i < 4; i++) {
@@ -277,17 +277,17 @@ document.querySelectorAll(".menu").forEach(function (element) {
 });
 var player = document.querySelector(".audioPlayer");
 var control = document.querySelector(".audioControl");
-var deco = document.querySelector('.sound');
+var deco = document.querySelector(".sound");
 player.volume = 0.1;
 control.addEventListener("click", function () {
   if (player.paused) {
     player.play();
-    deco.classList.remove('noSound');
+    deco.classList.remove("noSound");
     return;
   }
 
   player.pause();
-  deco.classList.add('noSound');
+  deco.classList.add("noSound");
 });
 setTimeout(function () {
   window.scrollTo(0, 0);
@@ -320,7 +320,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55578" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55935" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
