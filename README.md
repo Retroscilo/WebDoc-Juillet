@@ -26,4 +26,4 @@ Le projet présente une navigation bien particulière pour améliorer l'immersio
 
 ## Adresse du site
 
-https://app.netlify.com/sites/wizardly-bose-4383dc/overview
+https://wizardly-bose-4383dc.netlify.app

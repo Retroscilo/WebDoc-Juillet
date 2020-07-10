@@ -771,8 +771,8 @@ body {
   top: 250px;
 }
 .container__chapter--1 .view--3 .view--3__element--4 {
-  top: 60%;
-  left: 60%;
+  top: 75%;
+  left: 75%;
 }
 
 .container__chapter--2 .view--1__element--2 {
@@ -941,6 +941,7 @@ body {
   left: 50%;
   transform: translate(-50%);
   top: 55%;
+  padding: 40px;
 }
 .container__chapter--2 .view--5__element--4 {
   top: 80%;
